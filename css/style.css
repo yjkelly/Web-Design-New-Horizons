@@ -1,0 +1,87 @@
+body{
+  margin:0px;
+}
+
+#main-heading{
+  width:100%;
+  height:200px;
+  background:url('../img/newhorizonsbanner1.jpg');/*Placeholder image*/
+  background-size:cover;
+  opacity: 0.0;
+  
+}
+
+#heading-content{
+  padding:15px;
+}
+
+#main-text{
+  padding-top:35px;
+  /*text-align:center;*/
+  color:#fff;
+  font-size:85px;
+  font-weight:600;
+}
+
+#main-1{
+  font-weight:100;
+}
+
+.icons{
+  float:right;
+  color:#fff;
+}
+
+nav {
+    background-color: #333;
+    margin: 0;
+    overflow: hidden;
+    padding-left:20%;
+}
+
+nav ul{
+    margin: 0;
+}
+.navitem {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right:15px;
+    text-align:center;
+    
+}
+
+.navlink{
+    color: #aaa;
+    display: block;
+    line-height: 2em;
+    padding: 0.5em 0.5em;
+    text-decoration: none;
+}
+
+.navlink:hover {
+    color: #fff;
+    background-color:#f8a53a;
+}
+
+.navitem:hover{
+  background-color:#f8a53a;
+  color: #fff;
+  -webkit-box-shadow: 10px 13px 30px -5px rgba(112,112,112,1);
+-moz-box-shadow: 10px 13px 30px -5px rgba(112,112,112,1);
+box-shadow: 10px 13px 30px -5px rgba(112,112,112,1);
+}
+
+footer{
+  height:30px;
+  background-color:#333; 
+  bottom:0;
+  position:fixed;
+  color:#aaa;
+  width:100%;
+  padding:10px;
+}
+
+#main-body{
+  background-color:#fff;
+}
+
