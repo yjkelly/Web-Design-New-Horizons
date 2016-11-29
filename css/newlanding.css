@@ -1,0 +1,468 @@
+body
+{
+margin:0;
+color:white;
+background:black;
+font-family:Arial;
+}
+a
+{
+color:white;
+}
+
+#header
+        {
+        position:fixed;
+        background-color:#f11111;
+        text-align:center;
+        width:100%;
+        height:50px;
+	}
+#first
+{
+width:100%;
+height:1000px;
+background-image:url('../img/newbackground.jpg');
+background-repeat:no-repeat;
+//background-attachment:fixed;
+//background-size:100%;
+background-size: cover;
+}
+.breakblue
+{
+text-align:center;
+width:100%;
+height:200px;
+background-color:#5e97ab;
+}
+.breakorange
+{
+text-align:center;
+width:100%;
+height:200px;
+background-color:orange;
+}
+
+.centered {
+position:absolute;
+  top: 45%;
+  left: 45%;
+  margin-top: -50px;
+  margin-left: -230px;
+}
+.welcome
+{
+cursor:pointer;
+width:600px;
+text-align:center;
+height:100px;
+font-size:30px;
+font-family:Tamoha;
+color:#fff;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: #bbb;
+
+}
+#faded, #faded2
+{
+font-size:26px;
+display:none;
+}
+
+input[type=text] {height: 25px; width:500px;}
+
+#can
+{
+background:#68c0e6;
+width:1000px;
+float:left;
+padding:0px;	
+}
+#leftside
+        {
+        background-color:#5e97ab;
+        text-align:center;
+        width:350px;
+        height:604px;
+        float:left;
+        }
+#second
+{
+width:100%;
+height:1000px;
+background:#ccc;
+background-image:url('../img/tiled.jpg');
+}
+#third
+{
+text-align:center;
+background-color:#fff;
+width:100%;
+height:600px;
+overflow:auto;
+color:black;
+}
+#fourth
+{
+width:100%;
+height:1000px;
+background:#000;
+}
+#container
+{
+margin: 0 auto;
+width:1400px;
+}
+
+#pname
+{
+color:white;
+font-size:24px;
+}
+#pimage
+{height:150px;}
+#pdesc
+{
+margin: 0 auto;
+width:300px;
+color:white;
+height:200px;
+}
+#plink
+{
+background-color:#378;
+opacity:1.0;
+border-radius:10px;
+width:170px;
+height:20px;
+margin:0 auto;
+color:white;
+padding:20px;
+}
+#flightcontainer
+{
+padding:20px;
+border-radius:30px;
+width:75%;
+background:#222;
+opacity:0.9;
+overflow:auto;
+min-height:600px;
+margin:0 auto;
+}
+#flighthead
+{
+color:white;
+border-top-right-radius:30px;
+border-top-left-radius:30px;
+border-bottom:10px solid #000;
+padding-top:20px;
+font-size:30px;
+height:50px;
+text-align:center;
+}
+#flightleft
+{
+margin:0 auto;
+min-width:500px;
+padding-left:2%;
+width:53%;
+height:500px;
+float:left;
+color:white;
+}
+#flightright
+{
+margin:0 auto;
+min-width:500px;
+border-bottom-right-radius:30px;
+width:45%;
+height:500px;
+float:left;
+}
+.flyingtext
+{
+float:left;
+width:100px;
+}
+#ones, #outwardj, #returnj, #flightdatesoneway, #flightdatesreturn
+{
+display:none;
+}
+#flightrightcontent
+{
+text-align:center;
+font-size:20px;
+height:450px;
+}
+#flightrightskip
+{
+text-align:right;
+height:50px;
+}
+.skip
+{
+background-color:#fff;
+padding:6px;
+font-weight:bold;
+border:3px solid black;
+}
+.skip:hover
+{
+cursor:pointer;
+background-color:#ff0;
+padding:6px;
+font-weight:bold;
+border:3px solid black;
+}
+.spacing
+{
+float:left;
+margin-right:15px;
+}
+#cheap
+{
+background-color:#cfc;
+padding:6px;
+font-weight:bold;
+border:3px solid black;
+margin-left:20px;
+margin-right:20px;
+}
+#fancy
+{
+background-color:#ffc;
+padding:6px;
+font-weight:bold;
+border:3px solid black;
+margin-left:20px;
+margin-right:20px;
+}
+#flightdetails, #flightdetails2, #flightdetails3, #flightdetails4
+{
+background-color:white;
+height:92px;
+border-top:3px solid black;
+border-bottom:3px solid black;
+margin:2px;
+margin-bottom:5px;
+}
+.airline
+{
+text-align:center;
+position:relative;
+top:27px;
+float:left;
+color:#020;
+width:15%;
+}
+.airlinelogo
+{
+position:relative;
+top:18px;
+float:left;
+color:#020;
+width:15%;
+}
+.routereturn
+{
+font-weight:bold;
+position:relative;
+top:7px;
+float:left;
+font-size:14px;
+color:#002;
+text-align:center;
+width:40%;
+}
+.routeoneway
+{
+font-weight:bold;
+position:relative;
+top:32px;
+float:left;
+font-size:14px;
+color:#002;
+text-align:center;
+width:40%;
+}
+.price
+{
+position:relative;
+top:37px;
+color:black;
+float:left;
+width:20%;
+font-weight:bold
+}
+.rad
+{
+position:relative;
+top:37px;
+color:black;
+float:left;
+width:10%;
+font-weight:bold
+}
+.searcher
+{
+color:black;
+}
+#aboutdarken
+{
+display:none;
+opacity:0.4;
+background-color:black;
+position:fixed;
+width:100%;
+height:100%;
+top:0px;
+left:0px;
+}
+#about
+{
+display:none;
+border:10px solid #420;
+background-color:white;
+position:fixed;
+width:680px;
+height:680px;
+top:50%;
+left:50%;
+margin-left:-340px;
+margin-top:-340px;
+color:black;
+font-size:20px;
+}
+.abouthead
+{
+padding-top:20px;
+float:left;
+width:360px;
+text-align:center;
+font-size:30px;
+}
+.aboutleftpic, .aboutrightpic
+{
+float:left;
+width:160px;
+}
+.abouttext
+{
+padding:50px;
+}
+.aboutsig
+{
+float:left;
+width:200px;
+height:50px;
+}
+.aboutgap
+{
+float:left;
+width:100px;
+height:50px;
+}
+.threethingscontain
+{
+margin:0 auto;
+width:70%;
+}
+.threethings
+{
+background-color:#fff;
+float:left;
+border:10px solid white;
+width:30%;
+min-width:300px;
+margin:5px;
+height:400px;
+}
+.threethings:hover
+{
+border:10px solid orange;
+width:30%;
+min-width:300px;
+margin:5px;
+height:400px;
+}
+#sun{
+  width:40px;
+  height:40px;
+  position:absolute;
+  top:1000px;
+  left:280px;
+}
+.storeitem
+{
+margin-top:15%;
+width:70%;
+}
+.storeitem:hover
+{
+margin-top:10%;
+width:80%;
+
+}
+.threethingscontain
+{
+font-size:30px;
+text-align:center;
+}
+#cover
+{
+opacity:0.0;
+position:absolute;
+top:0px;
+background:white;
+width:100%;
+height:1000px;
+}
+.guidehead
+{
+font-size:40px;
+font-family:Tamoha;
+}
+.line
+{
+margin:0 auto;
+background-color:black;
+height:2px;
+width:60%;
+}
+#searchbar
+        {
+        width:500px;
+        margin: 0 auto;
+        text-align:left;
+        overflow:hidden;
+        }
+#scon
+        {
+        width:500px;
+        margin: 0 auto;
+        }
+#searchpop
+        {
+        position:absolute;
+        z-index:1000;
+        display:none;
+        width:500px;
+        margin: 0 auto;
+        background-color:#fff;
+        text-align:left;
+        color:blue;
+        }
+.highlight
+{
+background-color:#ddd;
+color:black;
+width:100%;
+}
+.normal
+{
+background-color:#fff;
+color:black;
+width:100%;
+}
+

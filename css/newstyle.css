@@ -1,0 +1,138 @@
+body
+{
+margin:0;
+}
+a {
+text-decoration: none;
+}
+
+/*css for the top part of the page*/
+
+.logoleft
+{
+text-align:center;
+font-size:24px;
+font-weight:bold;
+font-family:Arial;
+color:black;
+float:left;
+width:20%;
+background-color:white;
+height:40px;
+padding-top:25px;
+padding-bottom:25px;
+border-bottom:1px solid black;
+}
+#navbar
+{
+width:100%;
+}
+.topbar
+{
+float:left;
+width:80%;
+height:30px;
+background-color:#000;
+}
+.linksbar
+{
+float:left;
+width:80%;
+background-color:white;
+height:60px;
+border-bottom:1px solid black;
+}
+.link1
+{
+text-align:center;
+padding:20px;
+font-size:20px;
+float:left;
+width:150px;
+height:20px;
+border-left:1px solid black;
+border-right:1px solid black;
+background-color:white;
+color:black;
+}
+.link1:hover, .link2:hover, .link3:hover, .link4:hover
+{
+background-color:orange;
+color:white;
+}
+
+/*css for the about pop-up :) */
+#aboutdarken
+{
+display:none;
+opacity:0.4;
+background-color:black;
+position:fixed;
+width:100%;
+height:100%;
+top:0px;
+left:0px;
+}
+#about
+{
+display:none;
+border:10px solid #420;
+background-color:white;
+position:fixed;
+width:680px;
+height:680px;
+top:50%;
+left:50%;
+margin-left:-340px;
+margin-top:-340px;
+color:black;
+font-size:20px;
+}
+.abouthead
+{
+padding-top:20px;
+float:left;
+width:360px;
+text-align:center;
+font-size:30px;
+}
+.aboutleftpic, .aboutrightpic
+{
+float:left;
+width:160px;
+}
+.abouttext
+{
+padding:50px;
+}
+.aboutsig
+{
+float:left;
+width:200px;
+height:50px;
+}
+.aboutgap
+{
+float:left;
+width:100px;
+height:50px;
+}
+
+
+
+
+
+#footer
+        {
+	background-color:#111111;
+	height:60px;
+	clear:both;        
+	color:#999;
+	font-size:14px;
+	text-align:right;
+}
+
+#clear
+        {
+	clear:both;
+        }

@@ -1,0 +1,13 @@
+Data for the map page	
+===============================================================================================================
+barcelona: Ah, Barcelona. The birthplace of the sun. Make sure to bring a lot of sunscreen with you, and water.
+dublin: Dublin, the heart of Ireland. But if you want an adventure featuring leprechauns and pots of gold, you should probably get out of the city and into the green. (Warning: Weather not a guarantee)
+losangeles: Everyone wants to be a movie star, right? Well now's your chance. Just head on over with your good looks, or your script for a new show, and spend months of soul-crushing rejection waiting tables
+miami: Party in the city where the heat is on.<br>All night on the beach til the break of dawn<br>Welcome to Miami (bienvenido a Miami)!
+newyork: If you like New York, you'll *love* Old York. Unfortunately that burned down in 1722, but if you visit a local crematorium, it might give you an idea of what it was like...in 1722
+oslo: Hey, you decided to go to Norway. That's so far off the normal holiday destination map, that you should probably go visit their most famous things. You know..all those famous Norwegian things.
+paris: The Eiffel Tower is fantastic, but if you're afraid of heights, maybe you can go wander around the underground cave system in the city. And if you can't find it, make your own. (Bring a shovel!)
+rome: All roads lead to Rome. So naturally you ended up here. Unfortunately, it's impossible to leave via road. You may need to catch a boat.
+sydney: Australia. The birthplace of Opera Houses, Crocodile Dundee and Knifey/Spooney. 
+tokyo: Remember when Toyko looked like this? Well, you can pretend it still does, by completely avoiding the city.
+rio: Her name is Rio and she dances on the sand. Just like that river drifting through a dusty land.
