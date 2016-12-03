@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Boilerplate</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li class="navitem"><a class="navlink" href="#">Home</a></li>
+        <li class="navitem"><a class="navlink" href="#">Destinations</a></li>
+        <li class="navitem"><a  class="navlink" href="#">Accommodation</a></li>
+        <li class="navitem"><a class="navlink" href="#">Activities</a></li>
+        <li class="navitem"><a class="navlink" href="#">Shop</a></li>
+        <li class="navitem"> <a class="navlink" id="basket" href="#">Basket</a></li>
+      </ul>
+    </nav>
+    <img src ="./img/activities/sunrisemountain2.png" id="sunrise-pic"/>
+    <div id="main-body">
+      <div id="slider">
+
+      </div>
+      <div id="grey-box-form">
+        <div id="form-box">
+          <form>
+              <div class="form-item">
+                <label for="destination-box">Destination</label>
+                <select name="destination-box">
+                  <option value="iceland">Iceland</option>
+                  <option value="papag">Papua New Guinea</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="arrival-box">Arrival</label>
+                <input type="text" name="arrival-box" class="date-box-size" id="arrive-time">
+              </div>
+              <div class="form-item">
+                <label for="departure-box">Departure</label>
+                <input type="text" name="departure-box" class="date-box-size" id="depart-time">
+              </div>
+              <div class="form-item">
+                <label for="number-of-guests">Persons</label>
+                <input type="number" name="number-of-guests" id="number-of-guests-box-size" min="1">
+              </div>
+              <div class="form-item">
+                <label for="category">Category</label>
+                <select name="category">
+                  <option value="default">--Choose Category--</option>
+                  <option value="skiing">Sking</option>
+                  <option value="hiking">Hiking</option>
+                  <option value="offroading">Offroading</option>
+                  <option value="biking">Biking</option>
+                  <option value="scubadiving">Scuby Diving</option>
+                  <option value="skydiving">Sky Diving</option>
+                </select>
+              </div>
+              <div id="form-button">
+                <button id="search-button" type="button">Search</button>
+              </div>
+          </form>
+        </div>
+      </div>
+      <div id="activity-heading">
+      <h2>We found <span id="activity-num">3</span> <span id="activity-type">Hiking</span> activities in <span id="location-activities">France</span> </h2>
+      </div>
+      <div id="activity-refine">
+        <label for="sortby">Sort results</label>
+        <select name="sortby">
+        <option value="asc"> Price (ASC)</option>
+        <option value="desc">Price (DESC)</option>
+        </select>
+      </div>
+      <div id="activity-container">
+        <div class="sub-activity-box">
+          <div class="sub-img-activity">
+            <img src="./img/activities/skiing.jpg" class="sub-activity-img">
+          </div>
+          <div class="sub-activity-title">
+            <span class="activity-text" >
+              Snowsports
+            </span>
+          </div>
+          <div class="sub-activity-description">
+            <p> See everything the apls have to offer with our Susa Valley Hike</p>
+          </div>
+          <div class="sub-activity-price-book">
+            <span>500</span>
+            <button class="book-activity">Book</button>
+          </div>
+        </div>
+      </div>
+      <div id="reciept-border">
+        <div id="receipt" class="jaggededges">
+          <h2>Price Breakdown</h2>
+          <table>
+            <tr>
+              <th>Activities</th>
+              <td>0</td>
+            </tr>
+            <tr class="table-colour2">
+              <th>Accommodation</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Vaccinations</th>
+              <td>0</td>
+            </tr>
+            <tr class="table-colour2">
+              <th>Shop</th>
+              <td>0</td>
+            </tr>
+
+          </table>
+          <h3 id="border-price">Total Price <span id="tPrice">0</span></h3>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+    Copyright and other footer information goes here
+    </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://code.jquery.com/color/jquery.color-2.1.2.min.js'></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/cookies.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/activities.js"></script>
+  </body>
+</html>

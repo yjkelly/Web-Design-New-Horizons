@@ -8,7 +8,7 @@ body{
   background:url('../img/newhorizonsbanner1.jpg');/*Placeholder image*/
   background-size:cover;
   opacity: 0.0;
-  
+
 }
 
 #heading-content{
@@ -17,7 +17,6 @@ body{
 
 #main-text{
   padding-top:35px;
-  /*text-align:center;*/
   color:#fff;
   font-size:85px;
   font-weight:600;
@@ -47,7 +46,7 @@ nav ul{
     padding-left: 15px;
     padding-right:15px;
     text-align:center;
-    
+
 }
 
 .navlink{
@@ -67,21 +66,243 @@ nav ul{
   background-color:#f8a53a;
   color: #fff;
   -webkit-box-shadow: 10px 13px 30px -5px rgba(112,112,112,1);
--moz-box-shadow: 10px 13px 30px -5px rgba(112,112,112,1);
-box-shadow: 10px 13px 30px -5px rgba(112,112,112,1);
+  -moz-box-shadow: 10px 13px 30px -5px rgba(112,112,112,1);
+  box-shadow: 10px 13px 30px -5px rgba(112,112,112,1);
 }
 
 footer{
   height:30px;
-  background-color:#333; 
+  background-color:#333;
   bottom:0;
-  position:fixed;
+
   color:#aaa;
-  width:100%;
   padding:10px;
 }
 
 #main-body{
   background-color:#fff;
+  box-shadow:0px 1px 0px #dde0e7;
+
 }
 
+#grey-box-form{
+  /*width:100%;*/
+  background-color:#f5f6f8;
+  padding:90px;
+  box-shadow:0px 1px 0px #dde0e7;
+}
+#form-box{
+  margin:0 auto;    /*center horizontally*/
+  width:730px;
+  background-color:#50c5b3;
+  padding-top:20px;
+  padding-left:20px;
+  padding-right:20px;
+  -webkit-box-shadow: 0px 5px 3px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 5px 3px -2px rgba(0,0,0,0.75);
+  box-shadow: 0px 5px 3px -2px rgba(0,0,0,0.75);
+}
+#form-button{
+  margin:0 auto;
+  width:200px; /* Center aligning anything needs a set width, because its fullscreen by default and therefore cannot be centered */
+
+
+}
+
+#search-button{
+  width: 180px;
+  border: 1px solid #fff;
+  background-color:#50c5b3;
+  padding: 10px;
+  margin: 10px;
+  margin-right: 20px;
+  color:white;
+  font-weight:bolder;
+  outline:0;
+  cursor: pointer;
+
+}
+.form-item{
+  padding-left:5px;
+  display:inline-block;
+
+
+}
+.form-item label{
+  display:block;
+}
+
+.form-item select{
+  height:20px;
+}
+
+.form-item input{
+  height:20px;
+
+}
+
+.date-box-size{
+  width:165px;
+}
+#number-of-guests-box-size{
+  width:50px;
+  height:15px;
+}
+.activity-individual-box{
+  vertical-align:top; /* Stop divs from pushing each other when applying hover effect*/
+  width:250px;
+  height:250px;
+  display: inline-block;/*put div side by side*/
+  margin-left: 30px;
+  margin-top:20px;
+  margin-bottom:20px;
+
+  /*Make the mouse pointer into the hand icon, so this looks clickable */
+  cursor: pointer;
+
+}
+.activity-thumbnail{
+  width:inherit;
+  height:inherit;/* gets the width of the parent element .activity-category and inherits*/
+}
+
+.activity-title-bar{
+  position:relative;
+  width:100%;
+  top:-40px;
+  color:white;
+  text-align:center;
+  background-color: #3E6BB3;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity:.95;
+
+}
+
+.double-wide-individual-box{
+  width:540px;
+}
+
+#activity-heading{
+    padding-bottom: 15px;
+    text-align: center;
+    background-color: #FF9147;
+    padding-top: 15px;
+    box-shadow:0px 1px 0px #dde0e7;
+
+}
+
+#activity-heading h2{
+  margin:0;
+}
+
+#activity-container{
+    padding: 20px;
+    width: 900px;
+    margin-left: 25px;
+    display: inline-block;
+    border: 3px solid #e0e3ec;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+
+/* Title bar colours for categories */
+
+#snowsports{
+  background-color:#FF7068;
+
+}
+#hiking{
+  background-color: #50C5B1;
+
+}
+#offroading{
+  background-color: #FFA568;
+
+}
+#watersports{
+  background-color: #5F80CB;
+}
+#biking{
+  background-color:#97EC60;
+}
+
+.activity-text{
+    position: relative;
+}
+/*refernce jagged edge border: http://www.w3schools.com/cssref/css3_pr_border-image.asp*/
+.jaggededges {
+    border: 20px solid transparent;
+    padding: 10px;
+    -webkit-border-image: url(../img/activities/jagged.png) 30 round; /* Safari 3.1-5 */
+    -o-border-image: url(../img/activities/jagged.png) 30 round; /* Opera 11-12.1 */
+    border-image: url(../img/activities/jagged.png) 30 round;
+    border-left:none;
+    border-right:none;
+    border-image-outset: 0.5;
+}
+#receipt{
+  height: 300px;
+  width:280px;
+  background-color:white;
+}
+
+#reciept-border{
+  padding:18px;
+  display: inline-block;
+  position: relative;
+  vertical-align:top;
+  margin-top:20px;
+  right:-60px;
+  background-color:#e0e3ec;
+  font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; /* refernce font:http://www.cssfontstack.com/Lucida-Sans-Typewriter*/
+}
+
+
+/*reciept header*/
+#receipt h2,h3{
+  margin:0;
+  text-align:center;
+  border-bottom:3px dotted;
+
+}
+
+#receipt table{
+  line-height: 30px;
+    text-align: left;
+    margin-top: 30px;
+    width:100%;
+    border-collapse:collapse;
+}
+tr.table-colour2{
+  background-color: #e0e3ec;
+}
+#border-price{
+  border-top:3px dotted;
+  margin-top:15px;
+
+}
+
+
+#sunrise-pic{
+  margin: 0 auto;
+  width:100%;
+  height:500px;
+}
+#activity-refine{
+  margin-left:792px;
+  margin-top:10px;
+}
+/*second part of activity page*/
+
+.sub-activity-box{
+  height:400px;
+  width:300px;
+  border: 1px solid;
+}
+.sub-activity-img{
+  height:200px;
+  width:300px;
+}

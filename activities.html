@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Boilerplate</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <nav id="main-nav">
+      <ul>
+        <li class="navitem"><a class="navlink" href="#">Home</a></li>
+        <li class="navitem"><a class="navlink" href="#">Destinations</a></li>
+        <li class="navitem"><a  class="navlink" href="#">Accommodation</a></li>
+        <li class="navitem"><a class="navlink" href="#">Activities</a></li>
+        <li class="navitem"><a class="navlink" href="#">Shop</a></li>
+        <li class="navitem"> <a class="navlink" id="basket" href="#">Basket</a></li>
+      </ul>
+    </nav>
+    <img src ="./img/activities/sunrisemountain2.png" id="sunrise-pic"/>
+    <div id="main-body">
+      <div id="slider">
+
+      </div>
+      <div id="grey-box-form">
+        <div id="form-box">
+          <form>
+              <div class="form-item">
+                <label for="destination-box">Destination</label>
+                <select name="destination-box">
+                  <option value="iceland">Iceland</option>
+                  <option value="papag">Papua New Guinea</option>
+                </select>
+              </div>
+              <div class="form-item">
+                <label for="arrival-box">Arrival</label>
+                <input type="text" name="arrival-box" class="date-box-size" id="arrive-time">
+              </div>
+              <div class="form-item">
+                <label for="departure-box">Departure</label>
+                <input type="text" name="departure-box" class="date-box-size" id="depart-time">
+              </div>
+              <div class="form-item">
+                <label for="number-of-guests">Persons</label>
+                <input type="number" name="number-of-guests" id="number-of-guests-box-size" min="1">
+              </div>
+              <div class="form-item">
+                <label for="category">Category</label>
+                <select name="category">
+                  <option value="default">--Choose Category--</option>
+                  <option value="skiing">Sking</option>
+                  <option value="hiking">Hiking</option>
+                  <option value="offroading">Offroading</option>
+                  <option value="biking">Biking</option>
+                  <option value="scubadiving">Scuby Diving</option>
+                  <option value="skydiving">Sky Diving</option>
+                </select>
+              </div>
+              <div id="form-button">
+                <button id="search-button" type="button">Search</button>
+              </div>
+          </form>
+        </div>
+      </div>
+      <div id="activity-heading">
+      <h2>What kind of activity would you like to do?</h2>
+      </div>
+      <div id="activity-container">
+        <div class="activity-individual-box" id="snow-box">
+          <img src="./img/activities/skiing.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar" id="snowsports">
+            <span class="activity-text" >
+              Snowsports
+            </span>
+          </div>
+        </div>
+        <div class="activity-individual-box" id="hike-box">
+          <img src="./img/activities/travelling-alone.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar" id="hiking">
+            <span class="activity-text">
+              Hiking
+            </span>
+          </div>
+        </div>
+        <div class="activity-individual-box" id="off-box">
+          <img src="./img/activities/offroading.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar" id="offroading">
+            <span class="activity-text">
+              Offroading
+            </span>
+          </div>
+        </div>
+        <div class="activity-individual-box double-wide-individual-box" id="water-box">
+          <img src="./img/activities/scubadiving.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar" id="watersports">
+            <span class="activity-text">
+              Watersports
+            </span>
+          </div>
+        </div>
+        <!--<div class="activity-individual-box">
+          <img src="./img/activities/skiing_alps.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar">
+            <span class="activity-text">
+              Scuba Diving
+            </span>
+          </div>
+        </div>-->
+        <div class="activity-individual-box" id="bike-box">
+          <img src="./img/activities/biking.jpg" class="activity-thumbnail"/>
+          <div class="activity-title-bar" id="biking">
+            <span class="activity-text">
+              Biking
+            </span>
+          </div>
+        </div>
+      </div>
+      <div id="reciept-border">
+        <div id="receipt" class="jaggededges">
+          <h2>Price Breakdown</h2>
+          <table>
+            <tr>
+              <th>Activities</th>
+              <td>0</td>
+            </tr>
+            <tr class="table-colour2">
+              <th>Accommodation</th>
+              <td>0</td>
+            </tr>
+            <tr>
+              <th>Vaccinations</th>
+              <td>0</td>
+            </tr>
+            <tr class="table-colour2">
+              <th>Shop</th>
+              <td>0</td>
+            </tr>
+
+          </table>
+          <h3 id="border-price">Total Price <span id="tPrice">0</span></h3>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+    Copyright and other footer information goes here
+    </footer>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+    <script src='https://code.jquery.com/color/jquery.color-2.1.2.min.js'></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
