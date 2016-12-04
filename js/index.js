@@ -1,7 +1,44 @@
+
+//vaidated the form
+//alerts users to errors
+//returns true if everyting is right
+//false otherwise
+function validateForm(){
+    var arrival = $('#arrive-time').val();
+    if(arrival=="" || arrival==null){
+      alert("Please select an arrival date");
+      return false;
+    }
+    var asDate = new Date(arrival);
+    if(asDate<new Date()){
+      alert("Arrival date cannot be in the past");
+      return false;
+    }
+    var departure = $('#depart-time').val();
+    if(departure=="" || departure == null){
+      alert("Please select a departure date");
+      return false;
+    }
+    var departureDate = new Date(departure);
+    if(departureDate<asDate){
+      alert("departure date cannot be before arrival date");
+      return false;
+    }
+    var guests = $('#number-of-guests-box-size').val();
+    if(guests==null || guests==""){
+      alert("Please select the number of guests");
+      return false;
+    }
+    var category = $('select[name=category] option:selected').val();
+    if(category=="default"){
+      alert("Please select a category");
+      return false;
+    }
+    //otherwise the form is valid
+    return true;
+}
+
 $(document).ready(function(){
-
-
-
   //using jQuery UI: https://jqueryui.com/datepicker/
   //adds a datepicker widget to a text input element
 
@@ -12,8 +49,14 @@ $(document).ready(function(){
   as the value of the input box
 */
 
-   $( "#arrive-time" ).datepicker();
-   $( "#depart-time" ).datepicker();
+   $( "#arrive-time" ).datepicker({onSelect:function(){
+     $('#arrive-time').change();
+   }});
+   $( "#depart-time" ).datepicker({
+     onSelect:function(){
+       $('#depart-time').change();
+     }
+   });
 
    /*
       .hover(fun1, fun2)
@@ -327,7 +370,7 @@ $(document).ready(function(){
     var arriveDate = getCookie("arrival");
     var departDate = getCookie("depart");
     var category = getCookie("category");
-
+    var guests = getCookie("guests");
     //check if they exist, and if they do, fill out the form
     if(destination!=null){
       $('#'+destination).attr('selected',true);
@@ -341,7 +384,9 @@ $(document).ready(function(){
     if(category!=null){
       $('option[value='+category+']').attr('selected',true);
     }
-
+    if(guests!=null){
+      $('#number-of-guests-box-size').val(guests);
+    }
       //set the cookies when the values in the form change
 
       $('select[name=destination-box]').change(function(){
@@ -349,7 +394,7 @@ $(document).ready(function(){
         setCookie('destination',newVal);
       });
 
-      $('input[name=arrival-box]').change(function(){
+      $('#arrive-time').change(function(){
         var newVal = $('input[name=arrival-box]').val();
         var asDate = new Date(newVal);
         if(asDate< new Date()){
@@ -378,7 +423,7 @@ $(document).ready(function(){
             $('input[name=departure-box]').val('');
           }
           else{
-            setCookie('departure',newVal);
+            setCookie('depart',newVal);
           }
         }
       });
@@ -386,10 +431,57 @@ $(document).ready(function(){
       //category
       $('select[name=category]').change(function(){
         var newVal = $('select[name=category] option:selected').val();
+        
         if(newVal!="default"){
           setCookie('category',newVal);
         }
       });
+
+      $('#number-of-guests-box-size').change(function(){
+        var numGuests = $('#number-of-guests-box-size').val();
+        setCookie('guests',numGuests);
+      });
     /*======================*/
+
+    /* form validation */
+    $('#search-button').click(function(){
+      //validate the form
+      if(validateForm()){
+        window.location="./activities-list.html";
+      }
+      //redirect if it works
+    });
+
+    $('#snow-box').click(function(){
+      if(validateForm()){
+        setCookie('category','snowsports');
+        window.location="./activities-list.html";
+      }
+    });
+    $('#hike-box').click(function(){
+      if(validateForm()){
+        setCookie('category','hiking');
+        window.location="./activities-list.html";
+      }
+    });
+    $('#off-box').click(function(){
+      if(validateForm()){
+        setCookie('category','offroading');
+        window.location="./activities-list.html";
+      }
+    });
+    $('#water-box').click(function(){
+      if(validateForm()){
+        setCookie('category','watersports');
+        window.location="./activities-list.html";
+      }
+    });
+    $('#bike-box').click(function(){
+      if(validateForm()){
+        setCookie('category','biking');
+        window.location="./activities-list.html";
+      }
+    });
+
 
 });

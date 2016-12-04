@@ -215,7 +215,7 @@ $(document).ready(function(){
       case "hiking":
           $('#activity-num').text(hiking.length);
           $('#activity-type').text("Hiking");
-          var sotredHiking = hiking.sort(function(a,b){a['price']-b['price']});
+          var sortedHiking = hiking.sort(function(a,b){a['price']-b['price']});
           writeActivities(sortedHiking);
           $('.sub-activity-title').css({'background-color':'#50C5B1'});
 
