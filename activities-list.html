@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Boilerplate</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css" >
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -17,8 +18,9 @@
         <li class="navitem"> <a class="navlink" id="basket" href="#">Basket</a></li>
       </ul>
     </nav>
+    <!--
     <img src ="./img/activities/sunrisemountain2.png" id="sunrise-pic"/>
-    <div id="main-body">
+  --><div id="main-body">
       <div id="slider">
 
       </div>
@@ -67,13 +69,13 @@
       </div>
       <div id="activity-refine">
         <label for="sortby">Sort results</label>
-        <select name="sortby">
+        <select name="sortby" id="sort" onchange="updateActivities()">
         <option value="asc"> Price (ASC)</option>
         <option value="desc">Price (DESC)</option>
         </select>
       </div>
       <div id="activity-container">
-        <div class="sub-activity-box">
+      <!--  <div class="sub-activity-box">
           <div class="sub-img-activity">
             <img src="./img/activities/skiing.jpg" class="sub-activity-img">
           </div>
@@ -89,28 +91,28 @@
             <span>500</span>
             <button class="book-activity">Book</button>
           </div>
-        </div>
+        </div>-->
       </div>
       <div id="reciept-border">
         <div id="receipt" class="jaggededges">
           <h2>Price Breakdown</h2>
           <table>
             <tr>
-              <th>Activities</th>
-              <td>0</td>
-            </tr>
-            <tr class="table-colour2">
-              <th>Accommodation</th>
-              <td>0</td>
-            </tr>
-            <tr>
-              <th>Vaccinations</th>
-              <td>0</td>
-            </tr>
-            <tr class="table-colour2">
-              <th>Shop</th>
-              <td>0</td>
-            </tr>
+                <th>Activities  <span id="delete-activity" class="fa fa-times hidden"></span></th>
+                <td  id="activity-price">0</td>
+              </tr>
+              <tr class="table-colour2">
+                <th>Accommodation <span id="delete-accommodation"class="fa fa-times hidden"></span></th>
+                <td id="accommodation-price">0</td>
+              </tr>
+              <tr>
+                <th>Vaccinations <span id="delete-vaccinations" class="fa fa-times hidden"></span></th>
+                <td id="vaccination-price">0</td>
+              </tr>
+              <tr class="table-colour2">
+                <th>Shop <span id="delete-shop" class="fa fa-times hidden"></span></th>
+                <td id="shop-price">0</td>
+              </tr>
 
           </table>
           <h3 id="border-price">Total Price <span id="tPrice">0</span></h3>

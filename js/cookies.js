@@ -3,12 +3,9 @@ function cookiesExist(cookieName){
   return cookieString.indexOf(cookieName)!=-1;//as long as indexof returns positive number the cookie exist
 }
   function getCookie(cookieName){
-
     //First see if the cookie exists
     if (cookiesExist(cookieName)){
-
       //it exists,
-
       //break the cookie string into an array
       var cookieArray=document.cookie.split(";");
       for(cookie in cookieArray){
@@ -23,7 +20,6 @@ function cookiesExist(cookieName){
          }
        }
      }
-
     else{
       //if the cookie doesn't exist return nothing
       return null;
@@ -33,6 +29,4 @@ function cookiesExist(cookieName){
 
   function setCookie(cookieName, cookieValue){
       document.cookie = cookieName+"="+cookieValue+";";
-      alert("I set a cookie");
-      alert(cookieName+"="+cookieValue+";");
   }

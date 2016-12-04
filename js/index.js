@@ -192,6 +192,92 @@ $(document).ready(function(){
     });
 
 
+    //get all current prices from the cookies and write them into
+    // the reciept table
+    var activityPrice = getCookie("activity-price");
+    var accommodationPrice = getCookie("accommodation-price");
+    var vaccinationPrice = getCookie("vaccination-price");
+    var shopPrice = getCookie("shop-price");
+
+
+    //write them into the table
+    // but mae sure they're not null first
+    if(activityPrice==null){
+      activityPrice=0;
+    }
+    if(accommodationPrice==null){
+      accommodationPrice=0;
+    }
+    if(vaccinationPrice==null){
+      vaccinationPrice=0;
+    }
+    if(shopPrice==null){
+      shopPrice=0;
+    }
+    //calculate the total price here, because before this the variables might be null
+    var totalPrice=parseInt(activityPrice)+parseInt(accommodationPrice)+parseInt(vaccinationPrice)+parseInt(shopPrice);
+    //now write them all out
+    $('#activity-price').text(activityPrice);
+    $('#accommodation-price').text(accommodationPrice);
+    $('#vaccination-price').text(vaccinationPrice);
+    $('#shop-price').text(shopPrice);
+    $('#tPrice').text(totalPrice);
+
+
+    //hover delete effect for table
+    $('tr').hover(function(){
+        $(this).find('span').css({'cursor':'pointer','display':'inline', 'color':'red'});
+    },
+  function(){
+        $(this).find('span').css({'display':'none'});
+  });
+
+  //if the user deletes activities
+    $('#delete-activity').click(function(){
+      var oldPrice = $('#activity-price').text();
+      //set the table activity price to 0
+      $('#activity-price').text("0");
+      //remove it from the total
+      var oldTotal = $('#tPrice').text();
+      var newTotal = parseInt(oldTotal)-parseInt(oldPrice);
+      $('#tPrice').text(newTotal);
+      //reset the cookie to 0
+      setCookie("activity-price","0");
+    });
+    $('#delete-accommodation').click(function(){
+      var oldPrice = $('#accommodation-price').text();
+      //set the table accomodation price to 0
+      $('#accommodation-price').text("0");
+      //remove it from the total
+      var oldTotal = $('#tPrice').text();
+      var newTotal = parseInt(oldTotal)-parseInt(oldPrice);
+      $('#tPrice').text(newTotal);
+      //reset the cookie to 0
+      setCookie("accommodation-price","0");
+    });
+    $('#delete-vaccinations').click(function(){
+      var oldPrice = $('#vaccination-price').text();
+      //set the table vaccinations price to 0
+      $('#vaccination-price').text("0");
+      //remove it from the total
+      var oldTotal = $('#tPrice').text();
+      var newTotal = parseInt(oldTotal)-parseInt(oldPrice);
+      $('#tPrice').text(newTotal);
+      //reset the cookie to 0
+      setCookie("vaccination-price","0");
+    });
+    $('#delete-shop').click(function(){
+      var oldPrice = $('#shop-price').text();
+      //set the table shop price to 0
+      $('#shop-price').text("0");
+      //remove it from the total
+      var oldTotal = $('#tPrice').text();
+      var newTotal = parseInt(oldTotal)-parseInt(oldPrice);
+      $('#tPrice').text(newTotal);
+      //reset the cookie to 0
+      setCookie("shop-price","0");
+    });
+
 
 
 });

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Boilerplate</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css" >
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -120,20 +121,20 @@
           <h2>Price Breakdown</h2>
           <table>
             <tr>
-              <th>Activities</th>
-              <td>0</td>
+              <th>Activities  <span id="delete-activity" class="fa fa-times hidden"></span></th>
+              <td  id="activity-price">0</td>
             </tr>
             <tr class="table-colour2">
-              <th>Accommodation</th>
-              <td>0</td>
+              <th>Accommodation <span id="delete-accommodation"class="fa fa-times hidden"></span></th>
+              <td id="accommodation-price">0</td>
             </tr>
             <tr>
-              <th>Vaccinations</th>
-              <td>0</td>
+              <th>Vaccinations <span id="delete-vaccinations" class="fa fa-times hidden"></span></th>
+              <td id="vaccination-price">0</td>
             </tr>
             <tr class="table-colour2">
-              <th>Shop</th>
-              <td>0</td>
+              <th>Shop <span id="delete-shop" class="fa fa-times hidden"></span></th>
+              <td id="shop-price">0</td>
             </tr>
 
           </table>
@@ -147,6 +148,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
     <script src='https://code.jquery.com/color/jquery.color-2.1.2.min.js'></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="./js/cookies.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
