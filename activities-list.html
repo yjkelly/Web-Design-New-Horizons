@@ -5,7 +5,7 @@
     <title>Boilerplate</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css" >
-    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Pacifico" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -29,7 +29,6 @@
       </div>
         <div class="slide-div" id="item-1">
           <p>Experience something <span id="greentext">new</span></p>
-
         </div>
         <div class="slide-div green" id="item-2">
           <p>“The core of mans' spirit comes from new <span id="orangetext">experiences</span>.”
@@ -43,15 +42,19 @@
         </ol>
       </div>
   </div>
-
       <div id="grey-box-form">
         <div id="form-box">
           <form>
               <div class="form-item">
                 <label for="destination-box">Destination</label>
                 <select name="destination-box">
-                  <option value="iceland">Iceland</option>
-                  <option value="papag">Papua New Guinea</option>
+                  <option id="australia" value="australia">Australia</option>
+                  <option id="france" value="france">France</option>
+                  <option id="iceland" value="iceland">Iceland</option>
+                  <option id="mexico" value="mexico">Mexico</option>
+                  <option id="nepal" value="nepal">Nepal</option>
+                  <option id="new-zealand" value="new-zealand">New Zealand</option>
+                  <option id="turkey" value="turkey">Turkey</option>
                 </select>
               </div>
               <div class="form-item">
@@ -64,7 +67,7 @@
               </div>
               <div class="form-item">
                 <label for="number-of-guests">Persons</label>
-                <input type="number" name="number-of-guests" id="number-of-guests-box-size" min="1">
+                <input type="number" name="number-of-guests" id="number-of-guests-box-size" min="1" value="1">
               </div>
               <div class="form-item">
                 <label for="category">Category</label>
@@ -95,7 +98,7 @@
         </select>
       </div>
       <div id="activity-container">
-      <!--  <div class="sub-activity-box">
+        <!--<div class="sub-activity-box">
           <div class="sub-img-activity">
             <img src="./img/activities/skiing.jpg" class="sub-activity-img">
           </div>

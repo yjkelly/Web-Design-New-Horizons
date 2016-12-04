@@ -320,5 +320,75 @@ $(document).ready(function(){
 
     /*======================*/
 
+    /*===== Form box =======*/
+
+    //on load, populate the form from cookies
+    var destination = getCookie("destination");
+    var arriveDate = getCookie("arrival");
+    var departDate = getCookie("depart");
+    var category = getCookie("category");
+    //check if they exist, and if they do, fill out the form
+    if(destination!=null){
+      $('#'+destination).attr('selected',true);
+    }
+    if(arriveDate!=null){
+      $('#arrive-time').val(arriveDate);
+    }
+    if(departDate!=null){
+      $('#depart-time').val(departDate);
+    }
+    if(category!=null){
+      $('option[value='+category+']').attr('selected',true);
+    }
+
+      //set the cookies when the values in the form change
+
+      $('select[name=destination-box]').change(function(){
+        var newVal = $('select[name=destination-box] option:selected').val();
+        setCookie('destination',newVal);
+      });
+
+      $('input[name=arrival-box]').change(function(){
+        var newVal = $('input[name=arrival-box]').val();
+        var asDate = new Date(newVal);
+        if(asDate< new Date()){
+          alert("You cannot select a date in the past");
+          $('input[name=arrival-box]').val('');
+        }
+        else{
+          setCookie('arrival',newVal);
+        }
+      });
+
+      $('input[name=departure-box]').change(function(){
+        var newVal = $('input[name=departure-box]').val();
+        var asDate = new Date(newVal);
+        //check the date isnt in the past
+        if(asDate<new Date()){
+          alert("You canot select a date in the past");
+          $('input[name=departure-box]').val('');
+        }
+        else{
+          //get the arrival date and check it
+          var arrivalDate = $('input[name=arrival-box]').val();
+          var arrivalAsDate = new Date(arrivalDate);
+          if(asDate<arrivalAsDate){
+            alert("Departure date cannot be before arrival date");
+            $('input[name=departure-box]').val('');
+          }
+          else{
+            setCookie('departure',newVal);
+          }
+        }
+      });
+
+      //category
+      $('select[name=category]').change(function(){
+        var newVal = $('select[name=category] option:selected').val();
+        if(newVal!="default"){
+          setCookie('category',newVal);
+        }  
+      });
+    /*======================*/
 
 });

@@ -191,8 +191,6 @@ $(document).ready(function(){
   //get the destination and category cookies
   //and figure out what activities to load
 
-  setCookie("destination", "Turkey");
-  setCookie("category", "biking");
 
   var destination = getCookie("destination");
   var activityCategory = getCookie("category");

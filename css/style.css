@@ -45,12 +45,12 @@ body{
 
 .container-overlay h2{
     margin:0;
-    margin-left:430px;
+    margin-left:465px;
     font-size:140px;
     color:white;
     text-align:center;
     text-shadow: 0px 0px 5px #000;
-    font-family: 'Bree Serif',serif;
+    font-family: 'Droid Sans', sans-serif;
     opacity:1;
 
 
@@ -59,7 +59,7 @@ body{
 .slide-div p{
   margin:0;
   margin-top:40px;
-  margin-left:10px;
+  margin-left:50px;
   font-size:60px;
   text-shadow: 0px 0px 5px #000;
   font-family: 'Pacifico', cursive;
@@ -69,13 +69,12 @@ body{
   color:#50c5b3;
 }
 #orangetext{
-  color:#5F80CB;
+  color:#E34941;
 }
 
 
-}
-#item-1{
-
+#item-1 p{
+  margin-left:190px;
 }
 #item-2{
   position:relative;
@@ -85,7 +84,9 @@ body{
 
 #item-2 p{
   font-size:40px;
-  background-color: rgba(151, 151,151,0.9);
+  background-color: rgba(233, 233, 233, 0.4);
+  padding: 20px;
+  margin-left:20px;
 }
 
 .left-side{
@@ -446,6 +447,6 @@ cursor:pointer;
 }
 
 
-tr:hover{
+#receipt tr:hover{
   background-color:#aaa;
 }
