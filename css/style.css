@@ -1,8 +1,116 @@
+
+
 body{
   margin:0px;
 }
 
+/* ===== SLIDER ======*/
+#slider{
+  height:500px;
+}
 
+#container{
+  width:100%;
+
+  height:500px;
+  overflow:hidden;
+  background-image:url(../img/activities/mounteverest.jpg);
+  background-size:cover;
+}
+
+.container-overlay{
+  padding-top:90px;
+  width:700px;
+  height:500px;
+  background-color:rgba(247, 107, 106,0.9);
+  position:relative;
+  top:-20px;
+}
+
+.slider-img{
+  width:inherit;
+  height:inherit;
+
+}
+
+.slide-div{
+  margin: 0 auto;
+  width: 1000px;
+  height: 300px;
+  text-align: left;
+  position: relative;
+  top: -400px;
+  color:white;
+}
+
+.container-overlay h2{
+    margin:0;
+    margin-left:430px;
+    font-size:140px;
+    color:white;
+    text-align:center;
+    text-shadow: 0px 0px 5px #000;
+    font-family: 'Bree Serif',serif;
+    opacity:1;
+
+
+}
+
+.slide-div p{
+  margin:0;
+  margin-top:40px;
+  margin-left:10px;
+  font-size:60px;
+  text-shadow: 0px 0px 5px #000;
+  font-family: 'Pacifico', cursive;
+}
+
+#greentext{
+  color:#50c5b3;
+}
+#orangetext{
+  color:#5F80CB;
+}
+
+
+}
+#item-1{
+
+}
+#item-2{
+  position:relative;
+  top:-700px;
+  left:150%;
+}
+
+#item-2 p{
+  font-size:40px;
+  background-color: rgba(151, 151,151,0.9);
+}
+
+.left-side{
+  float:left;
+}
+
+#slider-controls ol{
+  list-style-type: none;
+  margin:0;
+}
+
+#slider-controls ol li{
+  cursor:pointer;
+  color:white;
+}
+
+#slider-controls{
+  width:80px;
+  margin:0 auto;
+  position:relative;
+  top:-20px;
+}
+
+
+/* ============*/
 
 #heading-content{
   padding:15px;
@@ -286,10 +394,13 @@ tr.table-colour2{
 .sub-activity-box {
     height: 400px;
     width: 250px;
-    border: 1px solid;
+
     display: inline-block;
     vertical-align: top;
     margin-left: 35px;
+    -webkit-box-shadow: 0px 0px 9px 1px rgba(67,79,77,1);
+  -moz-box-shadow: 0px 0px 9px 1px rgba(67,79,77,1);
+  box-shadow: 0px 0px 9px 1px rgba(67,79,77,1);
 }
 .sub-activity-img{
   height:200px;

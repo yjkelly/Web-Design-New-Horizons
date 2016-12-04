@@ -278,20 +278,47 @@ $(document).ready(function(){
       setCookie("shop-price","0");
     });
 
+    /* ======= SLIDER ======*/
+    $('#slide-2').click(function(){
+      if( $('#slide-2').hasClass("fa-dot-circle-o")){
+        //if its currently selected, do nothing
+      }
+      else{
+        //animate the text
+        $('#item-1').animate({left:'-150%'});
+        $('#item-2').animate({left:'0%'},function(){
+          $('#item-1').css({'left':'150%'});
+          });
+          $('#slide-1').removeClass('fa-dot-circle-o');
+          $('#slide-1').addClass('fa-circle-o');
+          $('#slide-2').removeClass('fa-circle-o');
+          $('#slide-2').addClass('fa-dot-circle-o');
+      }
+
+
+    });
+
+
+    $('#slide-1').click(function(){
+      if( $('#slide-1').hasClass("fa-dot-circle-o")){
+        //if its currently selected, do nothing
+      }
+      else{
+        $('#item-2').animate({left:'-150%'});
+        $('#item-1').animate({left:'0%'},
+          function(){
+            $('#item-2').css('left','150%');
+          });
+
+
+          $('#slide-2').removeClass('fa-dot-circle-o');
+          $('#slide-2').addClass('fa-circle-o');
+          $('#slide-1').removeClass('fa-circle-o');
+          $('#slide-1').addClass('fa-dot-circle-o');
+      }
+      });
+
+    /*======================*/
 
 
 });
-
-
-
-/*
-bar
-width: 100%;
-height: 100%;
-top: -255px;
-
-text
-width: 100%;
-position: relative;
-top: 119px;
-*/
