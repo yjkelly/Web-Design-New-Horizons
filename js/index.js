@@ -25,7 +25,7 @@ $(document).ready(function(){
    $("#search-button").hover(function(){
      //animate the search button
      $("#search-button").animate({
-        backgroundColor:'#30AC978', //change the background colour to this
+        backgroundColor:'#30AC97', //change the background colour to this
      });
    },
     function(){
@@ -327,7 +327,7 @@ $(document).ready(function(){
     var arriveDate = getCookie("arrival");
     var departDate = getCookie("depart");
     var category = getCookie("category");
-    
+
     //check if they exist, and if they do, fill out the form
     if(destination!=null){
       $('#'+destination).attr('selected',true);
