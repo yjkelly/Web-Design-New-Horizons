@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>New Horizons - Activities</title>
+    <title>New Horizons - Accommodation</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css" >
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Pacifico" rel="stylesheet">
@@ -25,7 +25,7 @@
   <div id="slider">
       <div id="container">
         <div class="container-overlay">
-        <h2>Activities</h2>
+        <h2>Accommodation</h2>
       </div>
         <div class="slide-div" id="item-1">
           <p>Experience something <span id="greentext">new</span></p>
@@ -47,7 +47,7 @@
           <form>
               <div class="form-item">
                 <label for="destination-box">Destination</label>
-                <select name="destination-box">
+                <select name="destination-box" disabled >
                   <option id="australia" value="australia">Australia</option>
                   <option id="france" value="france">France</option>
                   <option id="iceland" value="iceland">Iceland</option>
@@ -59,19 +59,19 @@
               </div>
               <div class="form-item">
                 <label for="arrival-box">Arrival</label>
-                <input type="text" name="arrival-box" class="date-box-size" id="arrive-time">
+                <input type="text" name="arrival-box" class="date-box-size" disabled id="arrive-time" >
               </div>
               <div class="form-item">
                 <label for="departure-box">Departure</label>
-                <input type="text" name="departure-box" class="date-box-size" id="depart-time">
+                <input type="text" name="departure-box" class="date-box-size" disabled id="depart-time" >
               </div>
               <div class="form-item">
                 <label for="number-of-guests">Persons</label>
-                <input type="number" name="number-of-guests" id="number-of-guests-box-size" min="1" value="1">
+                <input type="number" name="number-of-guests" disabled id="number-of-guests-box-size" min="1" value="1" >
               </div>
               <div class="form-item">
                 <label for="category">Category</label>
-                <select name="category">
+                <select name="category" disabled>
                   <option value="default">--Choose Category--</option>
                   <option value="skiing">Sking</option>
                   <option value="hiking">Hiking</option>
@@ -82,17 +82,17 @@
                 </select>
               </div>
               <div id="form-button">
-                <button id="search-button" type="button">Search</button>
+                <button id="search-button" type="button" disabled>Search</button>
               </div>
           </form>
         </div>
       </div>
       <div id="activity-heading">
-      <h2>We found <span id="activity-num">3</span> <span id="activity-type">Hiking</span> activities in <span id="location-activities">France</span> </h2>
+      <h2>We found <span id="activity-num">3</span> accommodations in <span id="location-activities">France</span> </h2>
       </div>
       <div id="activity-refine">
         <label for="sortby">Sort results</label>
-        <select name="sortby" id="sort" onchange="updateActivities()">
+        <select name="sortby" id="sort" onchange="updateAccommodation()">
         <option value="asc"> Price (ASC)</option>
         <option value="desc">Price (DESC)</option>
         </select>
@@ -150,6 +150,6 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./js/cookies.js"></script>
     <script src="./js/index.js"></script>
-    <script src="./js/activities.js"></script>
+    <script src="./js/accommodation.js"></script>
   </body>
 </html>

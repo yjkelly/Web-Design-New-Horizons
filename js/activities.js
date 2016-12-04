@@ -118,7 +118,6 @@ function updatePrice(price){
   var totalPrice = $('#tPrice').text();
   var newTotalPrice = parseInt(totalPrice)+price;
   $('#tPrice').text(newTotalPrice);
-
 }
 
 //called when the dropdown list is triggered

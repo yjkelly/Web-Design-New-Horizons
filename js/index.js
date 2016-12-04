@@ -327,6 +327,7 @@ $(document).ready(function(){
     var arriveDate = getCookie("arrival");
     var departDate = getCookie("depart");
     var category = getCookie("category");
+    
     //check if they exist, and if they do, fill out the form
     if(destination!=null){
       $('#'+destination).attr('selected',true);
@@ -387,7 +388,7 @@ $(document).ready(function(){
         var newVal = $('select[name=category] option:selected').val();
         if(newVal!="default"){
           setCookie('category',newVal);
-        }  
+        }
       });
     /*======================*/
 
