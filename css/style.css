@@ -7,6 +7,8 @@ body{
 /* ===== SLIDER ======*/
 #slider{
   height:500px;
+  margin-top:18px;
+
 }
 
 #container{
@@ -45,7 +47,7 @@ body{
 
 .container-overlay h2{
     margin:0;
-    margin-left:465px;
+    margin-left:90%;
     font-size:140px;
     color:white;
     text-align:center;
@@ -448,3 +450,32 @@ cursor:pointer;
 #receipt tr:hover{
   background-color:#aaa;
 }
+
+/* ===== Breadcrumbs =========*/
+#breadcrumb-list{
+  margin:0;
+  list-style-type: none;
+  background-color:#f5f6f8;
+
+}
+
+#breadcrumb-list .breadcrumb{
+  display:inline;
+  padding:5px;
+  font-size: 25px;
+}
+#breadcrumb-container{
+  height:10px;
+
+}
+.breadcrumb-link{
+  font-size: 25px;
+  color:black;
+}
+.breadcrumb span{
+  padding-left: 5px;
+}
+.current{
+  text-decoration: underline;
+}
+/*=========================*/

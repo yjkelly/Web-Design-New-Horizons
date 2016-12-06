@@ -431,7 +431,7 @@ $(document).ready(function(){
       //category
       $('select[name=category]').change(function(){
         var newVal = $('select[name=category] option:selected').val();
-        
+
         if(newVal!="default"){
           setCookie('category',newVal);
         }
@@ -453,30 +453,36 @@ $(document).ready(function(){
     });
 
     $('#snow-box').click(function(){
+      $('select[name=category]').val('snowsports');
       if(validateForm()){
+
         setCookie('category','snowsports');
         window.location="./activities-list.html";
       }
     });
     $('#hike-box').click(function(){
+      $('select[name=category]').val('hiking');
       if(validateForm()){
         setCookie('category','hiking');
         window.location="./activities-list.html";
       }
     });
     $('#off-box').click(function(){
+      $('select[name=category]').val('offroading');
       if(validateForm()){
         setCookie('category','offroading');
         window.location="./activities-list.html";
       }
     });
     $('#water-box').click(function(){
+      $('select[name=category]').val('watersports');
       if(validateForm()){
         setCookie('category','watersports');
         window.location="./activities-list.html";
       }
     });
     $('#bike-box').click(function(){
+      $('select[name=category]').val('biking');
       if(validateForm()){
         setCookie('category','biking');
         window.location="./activities-list.html";

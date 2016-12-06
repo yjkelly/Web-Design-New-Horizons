@@ -6,23 +6,34 @@
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="./css/font-awesome.min.css" >
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Pacifico" rel="stylesheet">
+    <link href="css/newstyle.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/navfix.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/accommodation.css">
   </head>
   <body>
-    <nav id="main-nav">
-      <ul>
-        <li class="navitem"><a class="navlink" href="#">Home</a></li>
-        <li class="navitem"><a class="navlink" href="#">Destinations</a></li>
-        <li class="navitem"><a  class="navlink" href="#">Accommodation</a></li>
-        <li class="navitem"><a class="navlink" href="#">Activities</a></li>
-        <li class="navitem"><a class="navlink" href="#">Shop</a></li>
-        <li class="navitem"> <a class="navlink" id="basket" href="#">Basket</a></li>
-      </ul>
-    </nav>
+    <div id="navbar">
+  		<div class="logoleft"><img src="img/new_horizons_logo.png" width="240" height="50" alt=""/></div>
+  	  <div class="topbar"></div>
+  		<div class="linksbar">
+  			<div class="link1">Home</div>
+  			<div class="link1" onclick="showabout()">About</div>
+  			<div class="link1">Contact</div>
+  			<div class="link1">Shop</div>
+  		</div>
+    </div>
     <!--
     <img src ="./img/activities/sunrisemountain2.png" id="sunrise-pic"/>
   --><div id="main-body">
+  <div id="main-body">
+    <div id="breadcrumb-container">
+      <ul id="breadcrumb-list">
+        <li class="breadcrumb"><a href="newlanding.html" class="breadcrumb-link">Home</a><span>&gt;&gt;</span></li>
+        <li class="breadcrumb"><a href="activities.html" class="breadcrumb-link">Activities</a><span>&gt;&gt;</span></li>
+        <li class="breadcrumb"><a href="accommodation.html" class="breadcrumb-link current">Accommodation</a></li>
+      </ul>
+    </div>
+
   <div id="slider">
       <div id="container">
         <div class="container-overlay">
@@ -74,12 +85,11 @@
                 <label for="category">Category</label>
                 <select name="category" disabled>
                   <option value="default">--Choose Category--</option>
-                  <option value="skiing">Sking</option>
+                  <option value="snowsports">Snowsports</option>
                   <option value="hiking">Hiking</option>
                   <option value="offroading">Offroading</option>
                   <option value="biking">Biking</option>
-                  <option value="scubadiving">Scuby Diving</option>
-                  <option value="skydiving">Sky Diving</option>
+                  <option value="watersports">Watersports</option>
                 </select>
               </div>
               <div id="form-button">
