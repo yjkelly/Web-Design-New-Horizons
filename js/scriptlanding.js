@@ -1,3 +1,10 @@
+var mousePos;
+	var imx=[]; // horizontal position of each image
+	var img=[];
+var mastercounter=0;
+var sliderDest=[];
+var slidercanvas;
+var slidercontext;
 var destination="";
 var source="Dublin";
 var onewayreturn="";
@@ -28,7 +35,7 @@ var datastore = {
 
     init: function () {
         $.ajax({
-            url: "../data.txt",
+            url: "data2.txt",
             async: true,
             success: function (data){
                 datastore.fileContents = data;
@@ -65,16 +72,16 @@ var datastore = {
       }
       var canvas = document.getElementById('myCanvas');
       var context = canvas.getContext('2d');
-	var cnames=['Dublin','Paris','Oslo','Barcelona','Rome','New York','Los Angeles', 'Miami', 'Tokyo', 'Sydney','Rio de Janeiro'];
-	var cnames2=['Ireland','France','Norway','Spain','Italy','USA','USA', 'USA', 'Japan', 'Australia','Brazil'];
-	var cnames3=['Eire','France','Norway','Espana','Italia','America','America', 'America', 'Japan', 'Oz', "Brazil"];
-	var cimages=['dublin0.jpg','paris0.jpg','oslo0.jpg','barcelona0.jpg','rome0.jpg','newyork0.jpg','losangeles0.jpg','miami0.jpg','tokyo0.jpg','sydney0.jpg','rio0.jpg'];
-	var cdesc=['dublin:','paris:','oslo:','barcelona:','rome:','newyork:','losangeles:','miami:','tokyo:','sydney:','rio:'];
-	var radius = 2;
+	var cnames=['Iceland','France','Nepal','New Zealand','Mexico','Australia','Turkey'];
+	var cnames2=['Reykjavik','Paris','Kathmandu','Wellington','Mexico City','Sydney','Ankara'];
+	var cnames3=['iceland','France','Nepal','new zealand','Mexico','Aussie','Turkey'];
+	var cimages=['iceland1.jpg','france1.jpg','nepal1.jpg','newzealand1.jpg','mexico1.jpg','australia1.jpg','turkey1.jpg'];
+	var cdesc=['iceland:','france:','nepal:','newzealand:','mexico:','australia:','turkey:'];
+	var radius = 3;
 	var closest_place=0;
 	var closest_distance = 100000;
-      var xpos=[449,474,494,470,500,267,127,234,863,898,344]; 
-      var ypos=[208,228,179,254,250,247,268,303,261,507,456];
+      var xpos=[424,474,713,962,172,898,560]; 
+      var ypos=[158,228,299,544,323,507,259];
 	canvas.addEventListener('click', function() {
 		if (destination.length>1)
 			gotoUrl("accommodation.html");
@@ -91,9 +98,9 @@ var datastore = {
 	}	
 
       canvas.addEventListener('mousemove', function(evt) {
-        var mousePos = getMousePos(canvas, evt);
+        mousePos = getMousePos(canvas, evt);
         var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
-        //writeMessage(canvas, message);
+	//writeMessage(canvas, message);
 	closest_place=0;
 	closest_distance=100000;
 	for (i = 0 ; i<xpos.length;i++)
@@ -128,10 +135,12 @@ window.onload = function() {
     var ctx=c.getContext("2d");
     var img=document.getElementById("mapmono");
     ctx.drawImage(img,0,0,c.width,c.height);
-      var xpos=[449,474,494,470,500,267,127,234,863,898,344]; 
-      var ypos=[208,228,179,254,250,247,268,303,261,507,456];
-//      var xpos=[530,560,584,554,592,319,151,280,1021,1062]; 
-//      var ypos=[241,264,208,295,290,287,311,352,303,588];
+      var xpos=[424,474,713,962,172,898,560]; 
+      var ypos=[158,228,299,544,323,507,259];
+
+//	Old temporary locations
+//      var xpos=[449,474,494,470,500,267,127,234,863,898,344]; 
+//      var ypos=[208,228,179,254,250,247,268,303,261,507,456];
 	for (i = 0 ; i<xpos.length;i++)
 	{
       context.beginPath();
@@ -160,6 +169,25 @@ window.onload = function() {
 	// update the html in a div to be whatever is in result
 	asleep=1;
 	updateHtml("pdesc",result);
+	}
+	function guideData(place)
+	{
+	var q=0,qw=0,success=0;
+	result="";
+
+	// search holddata for our label tag
+	index=holddata.search(place);
+	
+	// then set result to be whatever is on the rest of that line 
+	index=index+place.length;
+	while (holddata[index]!='\n')
+		{
+		result=result+holddata[index];
+		index++;
+		}
+	// update the html in a div to be whatever is in result
+	asleep=1;
+	updateHtml("sliderpop",result);
 	}
 
 function updateHtml(id,newdata){
@@ -662,7 +690,18 @@ function hideabout()
 slowdisappear('#about');
 slowdisappear('#aboutdarken');
 }
+function hideslider()
+{
+slowdisappear('#sliderpop');
+slowdisappear('#sliderdarken');
+  setTimeout(function(){
+document.getElementById("sliderdarken").style.zIndex="-999";
+document.getElementById("sliderpop").style.zIndex="-1000";
+	},500);
+	
+}
 
+//Yvette's cool code idea for the sun
 $(document).ready(function(){
   setTimeout(function(){
     $('#sun').animate({
@@ -698,6 +737,9 @@ $(document).ready(function(){
     },300);
   },4700);
  setTimeout(function(){
+document.getElementById("cover").style.zIndex = "1000";
+  },4700);
+ setTimeout(function(){
     $('#cover').animate({
       opacity:0.0,
     },300);
@@ -719,3 +761,135 @@ function scrollfurther()
                 }, 1000);
 
 }
+
+
+$(window).on("load", function() {
+       	slidercanvas = document.getElementById('mySlider');
+       	slidercontext = slidercanvas.getContext('2d');
+	slidercanvas.addEventListener('click', function() {
+//	alert(mousePos.x);
+	var clicked=-1;
+	if (mousePos.y>50&&mousePos.y<250)
+		if (mousePos.x>25&&mousePos.x<225)
+			{
+			clicked=0;
+			}
+		else if (mousePos.x>275&&mousePos.x<475)
+			{
+			clicked=1;
+			}
+		else if (mousePos.x>525&&mousePos.x<725)
+			{
+			clicked=2;
+			}
+	var guideplace=-1;
+	if (clicked!=-1)
+		{
+		for (q=0;q<7;q++)
+			{
+			if (imx[q]-250==clicked*250+25)
+				guideplace=q;
+			}
+		if (guideplace>-1)
+			{
+			guideData(cnamesguide[guideplace]);
+			document.getElementById("sliderdarken").style.zIndex="99";
+			document.getElementById("sliderpop").style.zIndex="100";
+			slowappear('#sliderpop');
+			slowappear('#sliderdarken');
+			}
+		}
+	});
+	var cnamesguide=['icelandguide:','newzealandguide:','mexicoguide:','franceguide:','turkeyguide:','australiaguide:','nepalguide:'];
+	sliderdest=["  Iceland","New Zealand","  Mexico","  France","  Turkey","Australia","   Nepal"];
+        img[0]=document.getElementById("ice");
+        img[1]=document.getElementById("new");
+        img[2]=document.getElementById("mex");
+        img[3]=document.getElementById("fra");
+        img[4]=document.getElementById("tur");
+        img[5]=document.getElementById("aus");
+        img[6]=document.getElementById("nep");
+	var q;
+	for (q=0;q<7;q++)
+		{
+		imx[q]=25+250*q;
+		}
+	for (q=0;q<7;q++)
+		{
+		slidercontext.drawImage(img[q],imx[q]-250,50,200,200)
+       	 	}
+        slidercontext.font = '18pt Calibri';
+        slidercontext.fillStyle = 'black';
+	for (q=0;q<7;q++)
+		{
+        	slidercontext.fillText(sliderdest[q], 55+imx[q]-250, 280);
+		}
+        slidercanvas.addEventListener('mousemove', function(evt) {
+        mousePos = getMousePos(slidercanvas, evt);
+        var message = 'Mouse position: ' + mousePos.x + ',' + mousePos.y;
+	//writeMessage(slidercanvas, message);
+	
+        });
+});
+
+function slideover(){
+	requestAnimationFrame(moveit);
+}
+function slideback(){
+	requestAnimationFrame(moveitback);
+}
+
+function moveit(){
+	mastercounter=mastercounter+10;
+       	slidercanvas = document.getElementById('mySlider');
+       	slidercontext = slidercanvas.getContext('2d');
+  	slidercontext.clearRect(0, 0, slidercanvas.width, slidercanvas.height); // clear the canvas
+	for (q=0;q<7;q++)
+		{
+		imx[q]=imx[q]+10;
+		if (imx[q]==1775)
+			imx[q]=25;
+		}
+	for (q=0;q<7;q++)
+		{
+		slidercontext.drawImage(img[q],imx[q]-250,50,200,200)
+       	 	}
+	        slidercontext.font = '18pt Calibri';
+       	 	slidercontext.fillStyle = 'black';
+		for (q=0;q<7;q++)
+			{
+        		slidercontext.fillText(sliderdest[q], 55+imx[q]-250, 280);
+			}
+
+if (mastercounter%250==0)
+	return;
+requestAnimationFrame(moveit);
+}
+
+function moveitback(){
+	mastercounter=mastercounter+10;
+       	slidercanvas = document.getElementById('mySlider');
+       	slidercontext = slidercanvas.getContext('2d');
+  	slidercontext.clearRect(0, 0, slidercanvas.width, slidercanvas.height); // clear the canvas
+	for (q=0;q<7;q++)
+		{
+		imx[q]=imx[q]-10;
+		if (imx[q]==15)
+			imx[q]=1765;
+		}
+	for (q=0;q<7;q++)
+		{
+		slidercontext.drawImage(img[q],imx[q]-250,50,200,200)
+       	 	}
+	        slidercontext.font = '18pt Calibri';
+       	 	slidercontext.fillStyle = 'black';
+		for (q=0;q<7;q++)
+			{
+        		slidercontext.fillText(sliderdest[q], 55+imx[q]-250, 280);
+			}
+if (mastercounter%250==0)
+	return;
+requestAnimationFrame(moveitback);
+}
+
+
