@@ -1,0 +1,87 @@
+
+body
+{
+background-color:#5e97ab;;
+background-image:url('../img/newbackground.jpg');
+background-repeat:no-repeat;
+background-size: cover;
+}
+#navbar, .linksbar
+{
+overflow:auto;
+}
+#basketform
+{
+opacity:0.8;
+color:white;
+margin:0 auto;
+border-radius:40px;
+border:5px solid black;
+width:700px;
+background-color:#111;
+height:500px;
+padding:40px;
+}
+label
+{
+width:120px;
+float:left;
+margin-left:40px;
+}
+	
+.baskethead, #sub
+{
+margin:0 auto;
+width:80%;
+font-size:20px;
+font-weight:bold;
+text-align:center;
+}
+#errormessage{
+padding:6px;
+border-radius:10px;
+}
+
+#receipt-container
+{
+margin:0 auto;
+width:500px;
+}
+
+
+
+
+input[type=text]
+{
+width:200px;
+padding:5px;
+background-color:#eee;
+font-size:14px;
+margin-bottom:4px;
+}
+input[type=text]:focus
+{
+background-color:#ffffff;
+}
+*:focus {
+    outline: none;
+}
+textarea
+{
+padding:10px;
+font-size:20px;
+}
+
+@media (max-width: 760px) {
+.link1, .logoleft, .topbar, .linksbar
+{
+width:100%;
+overflow:hidden;
+border-bottom:1px solid black;
+}
+#basketform
+{
+width:90%;
+}
+}
+
