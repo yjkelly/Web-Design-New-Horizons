@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <title>New Horizons</title>
+
+	<link href="css/style.css" type="text/css" rel="stylesheet" />
+	<link href="css/newstyle.css" type="text/css" rel="stylesheet" />
+	<link href="css/basket.css" type="text/css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/cookies.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/scriptbasket.js"></script>
+  </head>
+  <body>
+	<div id='navbar'>
+		<div class='logoleft'>Logo/Site Name</div>
+		<div class='topbar'></div>
+		<div class='linksbar'>
+			<div class='link1' onclick='location.href="newlanding.html"'>Home</div>
+			<div class='link1' onclick='showabout()'>About</div>
+			<div class='link1' onclick='location.href="contact.html"'>Contact</div>
+			<div class='link1' onclick='location.href="shop.html"'>Shop</div>
+			<div class='link1' onclick='location.href="login.html"'>Login</div>
+		</div>
+	</div>
+<br><br>
+<div id='receipt-container'>
+      <div id="reciept-border">
+        <div id="receipt" class="jaggededges">
+          <h2>Price Breakdown</h2>
+          <table>
+            <tr>
+              <th>Activities  <span id="delete-activity" class="fa fa-times hidden"></span></th>
+              <td  id="activity-price">0</td>
+            </tr>
+            <tr class="table-colour2">
+              <th>Accommodation <span id="delete-accommodation"class="fa fa-times hidden"></span></th>
+              <td id="accommodation-price">0</td>
+            </tr>
+            <tr>
+              <th>Vaccinations <span id="delete-vaccinations" class="fa fa-times hidden"></span></th>
+              <td id="vaccination-price">0</td>
+            </tr>
+            <tr class="table-colour2">
+              <th>Shop <span id="delete-shop" class="fa fa-times hidden"></span></th>
+              <td id="shop-price">0</td>
+            </tr>
+
+          </table>
+          <h3 id="border-price">Total Price <span id="tPrice">0</span></h3>
+        </div>
+      </div>
+</div>
+<br><br>
+<div id='basketform'>
+
+                                        <form name="payment"  onsubmit="return validateBasket()">
+						<div class='baskethead'>Please fill out your payment details below:</div> 
+						<br><br>
+                                               <label>Title:</label>
+                                                <input type="radio" name="title" value="mr" checked/>Mr.
+                                                <input type="radio" name="title" value="mrs" />Mrs.
+                                                <br/>
+                                                <label>First name:</label> <input type="text" name="firstname">
+                                                <br/>
+                                                <label>Surname:</label> <input type="text" name="secondname">
+                                                <br/>
+                                                <label>Address:</label> <textarea name="address" rows="4"></textarea>
+                                                <br/>
+                                                <label>Select Card:</label>
+                                                <select name="card">
+                                                        <option value="MasterCard">Mastercard</option>
+                                                        <option value="Visa">Visa</option>
+                                                        <option value="American Express">American Express</option>
+                                                </select>
+                                                <br/>
+                                                <label>Card Number:</label> <input type="text" name="cardno">
+                                                <br/>
+                                                <div id='errormessage'></div>
+                                                <br/>
+                                                <div id="sub"><input type="submit" value="Submit Details"></div>
+                                        </form>
+</div>
+<br><br><br>
+        <div id='footer'>
+        </div>
+
+  </body>
+</html>
