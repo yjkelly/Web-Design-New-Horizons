@@ -85,9 +85,6 @@ var datastore = {
 	canvas.addEventListener('click', function() {
 		if (destination.length>1)
 			gotoUrl("accommodation.html");
-//                $('html, body').animate({
-//                    scrollTop: $("#flighttag").offset().top
-//                }, 1000);
 	});
 	for (i = 0 ; i<xpos.length;i++)
 	{
@@ -207,9 +204,6 @@ function updateHtml(id,newdata){
 		if (clearoptions==1)
 			{
 			gotoUrl("accommodation.html");
-//	                $('html, body').animate({
-//        	            scrollTop: $("#flighttag").offset().top
-//                	}, 1000);
 			}
 		clearoptions =1;
 		}
@@ -430,9 +424,6 @@ function getCookie(cname){
 		if (destination.length>1)
 		gotoUrl("accommodation.html");
 
-//                $('html, body').animate({
-//                    scrollTop: $("#flighttag").offset().top
-//                }, 1000);
             });
 
         });
@@ -754,12 +745,15 @@ document.getElementById("cover").style.zIndex = "-1000";
 $(document).ready(function(){
   $('#main-heading').animate({opacity:1},'slow');
 });
-function scrollfurther()
-{
+function scrollfurther(){
                 $('html, body').animate({
                     scrollTop: $("#third").offset().top
                 }, 1000);
-
+}
+function scrollback(){
+                $('html, body').animate({
+                    scrollTop: $("#container").offset().top
+                }, 1000);
 }
 
 
