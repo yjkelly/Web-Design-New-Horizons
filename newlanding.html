@@ -11,11 +11,11 @@
 		<div class='logoleft'>Logo/Site Name</div>
 		<div class='topbar'></div>
 		<div class='linksbar'>
-			<div class='link1'>Home</div>
+			<div class='link1' onclick='location.href="newlanding.html"'>Home</div>
 			<div class='link1' onclick='showabout()'>About</div>
-			<div class='link1'>Contact</div>
-			<div class='link1'>Shop</div>
-			<div class='link1'>Login</div>
+			<div class='link1' onclick='location.href="contact.html"'>Contact</div>
+			<div class='link1' onclick='location.href="shop.html"'>Shop</div>
+			<div class='link1' onclick='location.href="login.html"'>Login</div>
 		</div>
 	</div>
 <div id='first'>
@@ -63,7 +63,8 @@ New Horizons
 
      </div>
 <br><center>
-<img onclick='scrollfurther()' src='img/downarrow.png' height="30px">
+<img class='clickable' onclick='scrollfurther()' src='img/downarrowdarker.png' height="40px">
+<br>
 </div>
 </div>
 <div class='breakorange'>
@@ -73,10 +74,28 @@ New Horizons
 <span class='guidehead'>Travel Guides</span>
 
 <div class='line'></div>
-<br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br>
-<div class='line'></div>
+<img id="ice" width="0" height="0" src="img/iceland2.jpg">
+<img id="new" width="0" height="0" src="img/newzealand2.jpg">
+<img id="mex" width="0" height="0" src="img/mexico2.jpg">
+<img id="nep" width="0" height="0" src="img/nepal2.jpg">
+<img id="aus" width="0" height="0" src="img/australia2.jpg">
+<img id="fra" width="0" height="0" src="img/france2.jpg">
+<img id="tur" width="0" height="0" src="img/turkey2.jpg">
+
+<div class='slidercontainer'>
+<div onclick='slideover()' class='leftarrow'><br><img class="clickable" src='img/arrowleft.jpg' width="40px"></div>
+<canvas id="mySlider" width="750" height="300">
+</canvas>
+<div onclick='slideback()' class='rightarrow'><br><img class="clickable" src='img/arrowright.jpg' width="40px"></div>
 </div>
+<br>
+<div class='line'></div>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+<div id='sliderpop' onclick='hideslider()'></div>
+<div id='sliderdarken' onclick='hideslider()'></div>
         <div id='footer'>
         </div>
 <div id='aboutdarken' onclick='hideabout()'>

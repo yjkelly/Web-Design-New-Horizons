@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <title>New Horizons</title>
+	<link href="css/newstyle.css" type="text/css" rel="stylesheet" />
+	<link href="css/contact.css" type="text/css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/scriptcontact.js"></script>
+  </head>
+  <body>
+	<div id='navbar'>
+		<div class='logoleft'>Logo/Site Name</div>
+		<div class='topbar'></div>
+		<div class='linksbar'>
+			<div class='link1' onclick='location.href="newlanding.html"'>Home</div>
+			<div class='link1' onclick='showabout()'>About</div>
+			<div class='link1' onclick='location.href="contact.html"'>Contact</div>
+			<div class='link1' onclick='location.href="shop.html"'>Shop</div>
+			<div class='link1' onclick='location.href="login.html"'>Login</div>
+		</div>
+	</div>
+<br><br>
+<div class='contacttitle'>
+Contact Us
+</div>
+<div class='contactunder'>Let us know what you think!</div>
+<br>
+<div id='contactform'>
+<br>
+	<form id='myContactForm' name='theContactForm' onsubmit="return false">
+	<div id='contactname' onkeydown="handle(event)";>
+	Hi there! What's your name?<br>
+	<input type='text' name="name">
+	</div>
+	<div id='undername'></div><br>
+	<div id='contactemailchoice'>
+		<input type='radio' name="emailcheck" value="yes" onclick="yesemail()">Yes
+		<input type='radio' name="emailcheck" value="no" onclick="noemail()">No
+	</div><br>
+	<div id='overemail'></div>
+	<div id='contactemail' onkeydown="handle2(event)";>
+		Please type your email address below<br>
+		<input type='text' name="email">
+	</div>
+	<div id='underemail'></div><br>
+	<div id='contactcontent'>
+	Type your thoughts below.
+		<textarea name='content' rows="4" columns="50"></textarea>
+	<br><button onclick='checktext()'>Send Message</button>
+	</div>
+	<div id='undercontent'></div><br>
+	</form>
+</div>
+<br><br><br>
+        <div id='footer'>
+        </div>
+
+  </body>
+</html>
