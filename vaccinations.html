@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vaccination Warning</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link href="css/newstyle.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/navfix.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/vaccinations.css" >
+
+</head>
+
+<body>
+
+  <div id="navbar">
+    <div class="logoleft"><img src="img/new_horizons_logo.png" width="240" height="50" alt=""/></div>
+    <div class="topbar"></div>
+    <div class="linksbar">
+      <div class='link1' onclick='location.href="newlanding.html"'>Home</div>
+			<div class='link1' onclick='showabout()'>About</div>
+			<div class='link1' onclick='location.href="contact.html"'>Contact</div>
+			<div class='link1' onclick='location.href="store.html"'>Shop</div>
+    </div>
+  </div>
+<div id="main-body">
+  <div id="breadcrumb-container">
+    <ul id="breadcrumb-list">
+      <li class="breadcrumb"><a href="newlanding.html" class="breadcrumb-link">Home</a><span>&gt;&gt;</span></li>
+      <li class="breadcrumb"><a href="activities.html" class="breadcrumb-link">Activities</a><span>&gt;&gt;</span></li>
+      <li class="breadcrumb"><a href="accommodation.html" class="breadcrumb-link">Accommodation</a><span>&gt;&gt;</span></li>
+      <li class="breadcrumb"><a href="accommodation.html" class="breadcrumb-link current">Vaccination</a></li>
+    </ul>
+  </div>
+  <div id="title-container">
+    <div id="vaccination-title">
+      <h1>Vaccinations</h1>
+    </div>
+  </div>
+    <div id="vaccinationwarningbox">
+        <div id="vaccinationwarningtext">
+            <!-- fontawesome cross icon -->
+            <div id="warningheader">
+                <span class="fa fa-plus-square-o" aria-hidden="true"></span>
+                <h2>Warning</h2>
+            </div>
+
+            <p>The country you have selected requires vaccination in order to travel to.</p>
+            <p>Make sure you are up to date with your vaccinations when traveling abroad</p>
+            <p>Please use the form below to book an vaccination appointment at a centre of your choosing</p>
+        </div>
+    </div>
+
+    <div id="vaccination-form">
+        <form id="vaccination-booking-form">
+            <!-- -->
+            <div id="dest-container">
+              <h2 id="dest-box-header">Destinations</h2>
+            <div id="destination-box">
+
+              <select name="destination-box">
+                <option id="australia" value="australia">Australia</option>
+                <option id="france" value="france">France</option>
+                <option id="iceland" value="iceland">Iceland</option>
+                <option id="mexico" value="mexico">Mexico</option>
+                <option id="nepal" value="nepal">Nepal</option>
+                <option id="new-zealand" value="new-zealand">New Zealand</option>
+                <option id="turkey" value="turkey">Turkey</option>
+              </select>
+            </div>
+          </div>
+
+            <fieldset id="main-form">
+                <legend id="form-header">Vaccination Booking</legend>
+                <div class="form-element">
+                    <label class="textStyle padded" for="firstName" >First Name</label>
+                    <input class="wideBox" type="text" id="firstName" name="firstName" placeholder="First Name">
+                </div>
+                <div class="form-element">
+                    <label class="textStyle padded"  for="lastName" >Last Name</label>
+                    <input class="wideBox" type="text" id="lastName" name="lastName" placeholder="Last Name">
+                </div>
+                <div class="form-element" id="radio">
+                    <label class="textStyle padded"  for="gender">Gender</label>
+                    <input type="radio" name="gender" value="male" id="male"><label class="textStyle" for="male">Male</label>
+                    <input type="radio" name="gender" value="female" id="female"><label class="textStyle" for="female">Female</label>
+                    <input type="radio" name="gender" value="other" id="other"><label class="textStyle" for="other">Other</label>
+                </div>
+                <div class="form-element">
+                    <label class="textStyle padded"  for="email">Email</label>
+                    <input class="wideBox" id="email" naame="email" type="email" placeholder="Email">
+                </div>
+                <div class="form-element">
+                    <label  class="textStyle padded"  for="tel" >Contact number</label>
+                    <input class="wideBox" type="text"  name="contact-number" placeholder="Contact number" id="tel">
+                </div>
+                <div class="form-element">
+                    <label class="textStyle padded"  for="clinic">Select Clinic</label>
+                    <select class="wideBox" id="clinic">
+                        <option value="-default">--Choose Clinic--</option>
+                        <option value="dublin">Dublin</option>
+                        <option value="cork">Cork</option>
+                        <option value="galway">Galway</option>
+                    </select>
+                </div>
+                <div class="form-element">
+                    <label class="textStyle padded"  for="date" >Date/Time</label>
+                    <input class="wideBox" type="text" id="date" placeholder="dd/mm/yyyy">
+                </div>
+                <div class="form-element">
+                    <label class="textStyle padded"  for="medhistory" >Medical History</label>
+                    <textarea class="wideBox" id="medhistory" placeholder="Medical History">
+
+                    </textarea>
+                </div>
+                <button id="submit" type="button">Submit</button>
+            </fieldset>
+
+          <div id="reciept-border">
+            <div id="receipt" class="jaggededges">
+              <h2>Price Breakdown</h2>
+              <table>
+                <tr>
+                    <th>Activities  <span id="delete-activity" class="fa fa-times hidden"></span></th>
+                    <td  id="activity-price">0</td>
+                  </tr>
+                  <tr class="table-colour2">
+                    <th>Accommodation <span id="delete-accommodation"class="fa fa-times hidden"></span></th>
+                    <td id="accommodation-price">0</td>
+                  </tr>
+                  <tr>
+                    <th>Vaccinations <span id="delete-vaccinations" class="fa fa-times hidden"></span></th>
+                    <td id="vaccination-price">0</td>
+                  </tr>
+                  <tr class="table-colour2">
+                    <th>Shop <span id="delete-shop" class="fa fa-times hidden"></span></th>
+                    <td id="shop-price">0</td>
+                  </tr>
+
+              </table>
+              <h3 id="border-price">Total Price <span id="tPrice">0</span></h3>
+            </div>
+            <input id="checkout-button" type="button" onclick="window.location='./basket.html';" value="Checkout">
+          </div>
+        </form>
+        <div id="modal-confirmation">
+            <p>Thank you. Your appointment has been booked.</p>
+            <p>Click <a href="./store.html">here</a> to proceed to the store</p>
+        </div>
+      </div>
+</div>
+<footer id="footer">
+    Copyright and other footer information goes here
+</footer>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://code.jquery.com/color/jquery.color-2.1.2.min.js'></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./js/cookies.js"></script>
+<script src="./js/index.js"></script>
+<script src="js/vaccinations.js"></script>
+</body>
+</html>

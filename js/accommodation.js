@@ -71,6 +71,26 @@ function updateAccommodation(acc){
   }
 }
 
+//When a user clicks next, this method will either reroute to the vaccination page or the store page
+// depending on the destination the user selected
+function vaccinationRequired(){
+  var vaccineCountries = ['australia','mexico', 'nepal', 'new-zealand', 'turkey'];
+  var destination = getCookie('destination');
+  if(destination!=null){
+    //taken from: http://stackoverflow.com/questions/6116474/how-to-find-if-an-array-contains-a-specific-string-in-javascript-jquery
+    if($.inArray(destination, vaccineCountries) > -1){
+      window.location="./vaccinations.html";
+    }
+    else{
+      window.location="./store.html";
+    }
+  }
+  else{
+    //go to store page by default
+    window.location="/./store.html";
+  }
+}
+
 $(document).ready(function(){
 
   var destination = getCookie("destination");

@@ -2,21 +2,20 @@
 <html>
   <head>
   <title>New Horizons</title>
-  	
+  <link rel="stylesheet" href="./css/font-awesome.min.css" />
 	<link href="css/newstyle.css" type="text/css" rel="stylesheet" />
 	<link href="css/store.css" type="text/css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/style.css" type="text/css">
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
   </head>
 <body>
 	<div id="navbar">
 		<div class="logoleft"><img src="img/new_horizons_logo.png" width="240" height="50" alt=""/></div>
 	  <div class="topbar"></div>
 		<div class="linksbar">
-			<div class="link1">Home</div>
-			<div class="link1" onclick="showabout()">About</div>
-			<div class="link1">Contact</div>
-			<div class="link1">Shop</div>
-			<div class="link1">Login</div>
+      <div class='link1' onclick='location.href="newlanding.html"'>Home</div>
+			<div class='link1' onclick='showabout()'>About</div>
+			<div class='link1' onclick='location.href="contact.html"'>Contact</div>
+			<div class='link1' onclick='location.href="store.html"'>Shop</div>
 		</div>
 	</div>
 
@@ -68,19 +67,19 @@
                                 </tr>
                             </thead>
                             <tbody id="orderedProductsTblBody">
-            
+
                             </tbody>
                             <tfoot>
                                 <tr>
                                     <td colspan="3" align="right" id="cart_total">
-            
+
                                     </td>
                                 </tr>
                             </tfoot>
                         </table>
                         <br>
                         <input type="button" value="Empty Cart" onclick="EmptyCart()" id="emptycart"/>
-                    </td>   
+                    </td>
                 </div><br><br>
                 <div id="checkoutbutton"><div id="my-background">Checkout</div></div>
         </div>
@@ -107,6 +106,7 @@
               </table>
               <h3 id="border-price">Total Price <span id="tPrice">0</span></h3>
             </div>
+            <input id="checkout-button" type="button" onclick="window.location='./basket.html';" value="Checkout">
           </div>
         </div>
 
@@ -116,6 +116,8 @@
      </div>
 	<br>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/cookies.js"></script>
     <script src="js/store.js"></script>
     <script src="js/index.js"></script>
 </body>

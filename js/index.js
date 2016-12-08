@@ -489,5 +489,20 @@ $(document).ready(function(){
       }
     });
 
+    /*============Responsive javascript ===============*/
+    // hook from: http://www.coalmarch.com/blog/how-to-execute-javascript-based-on-screen-size-using-jquery
+    if($(window).width()<=980){
+        //change the navigation bar first
+        //collapse it into a list
+        $('#navbar').html('');
+        $('#navbar').html('<img class="res-logo" src="img/new_horizons_logo.png" width="240" height="50" alt=""/>' +
+            '<ul class="res-list">' +
+            '<li class="res-item"><a class="res-link" href="newlanding.html">Home</a></li>' +
+            '<li class="res-item"><a class="res-link" href="#" onclick="showabout()">About</a></li>' +
+            '<li class="res-item"><a class="res-link" href="contact.html">Contact</a></li>' +
+            '<li class="res-item"><a class="res-link" href="store.html">Shop</a></li>' +
+            '</ul>');
+    }
+
 
 });

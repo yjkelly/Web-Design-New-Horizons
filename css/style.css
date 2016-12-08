@@ -386,6 +386,21 @@ tr.table-colour2{
 
 }
 
+input#checkout-button {
+    margin-top: 15px;
+    width: 100%;
+    padding: 15px;
+    border: 1px solid white;
+    cursor:pointer;
+    font-weight:bolder;
+    background-color: #50c5b3;
+    color:white;
+}
+
+input#checkout-button:hover {
+    background-color:rgb(48,172,151);
+}
+
 #activity-refine{
   margin-left:792px;
   margin-top:10px;
@@ -479,3 +494,94 @@ cursor:pointer;
   text-decoration: underline;
 }
 /*=========================*/
+/* responsive navbar*/
+.res-list{
+    list-style-type: none;
+    margin: 0 auto;
+    width: 100%;
+    background-color: #3e3b3b;
+    padding:0;
+}
+
+a.res-link {
+    color: white;
+    font-size: 30px;
+    padding-left:50px;
+}
+
+li.res-item {
+    border: 1px solid white;
+}
+
+
+
+
+
+#skip-button{
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    left: 340px;
+    bottom:10px;
+    margin-top: 20px;
+}
+
+#skip-button input{
+    width:100%;
+    padding:15px;
+    border:0;
+    cursor:pointer;
+    background-color:#FF9147;
+    color:white;
+    font-size: 15px;
+}
+
+
+#back-button {
+    width: 300px;
+    position: relative;
+    bottom: 60px;
+    margin-left: 25px;
+}
+
+#back-button input{
+    width:100%;
+    padding:15px;
+    border:0;
+    cursor:pointer;
+    background-color:/*rgb(247, 107, 106)*/rgb(48,172,151);
+    color:white;
+    font-size: 15px;
+}
+
+
+
+/* Media queries */
+@media screen and (max-device-width: 768px){
+    #slider{
+        display:none; /*Dont show the slider for small screens*/
+    }
+
+    /*Show icons on the reciepts */
+    .hidden{
+        display:inline;
+        color:red;
+    }
+
+    /*reposition the skip button*/
+    #skip-button{
+        display:inline-block;
+        left:250px;
+        top:100px;
+        margin:0;
+    }
+
+
+    #back-button{
+        display:inline-block;
+        margin-left:0;
+        top: 150px;
+        left: -53px;
+    }
+
+}

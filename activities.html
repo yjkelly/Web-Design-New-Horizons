@@ -15,14 +15,12 @@
   		<div class="logoleft"><img src="img/new_horizons_logo.png" width="240" height="50" alt=""/></div>
   	  <div class="topbar"></div>
   		<div class="linksbar">
-  			<div class="link1">Home</div>
-  			<div class="link1" onclick="showabout()">About</div>
-  			<div class="link1">Contact</div>
-  			<div class="link1">Shop</div>
+        <div class='link1' onclick='location.href="newlanding.html"'>Home</div>
+  			<div class='link1' onclick='showabout()'>About</div>
+  			<div class='link1' onclick='location.href="contact.html"'>Contact</div>
+  			<div class='link1' onclick='location.href="store.html"'>Shop</div>
   		</div>
   	</div>
-
-    <div id="main-body">
       <div id="main-body">
         <div id="breadcrumb-container">
           <ul id="breadcrumb-list">
@@ -58,13 +56,13 @@
               <div class="form-item">
                 <label for="destination-box">Destination</label>
                 <select name="destination-box">
-                  <option value="australia">Australia</option>
-                  <option value="france">France</option>
-                  <option value="iceland">Iceland</option>
-                  <option value="mexico">Mexico</option>
-                  <option value="nepal">Nepal</option>
-                  <option value="new-zealand">New Zealand</option>
-                  <option value="turkey">Turkey</option>
+                  <option id="australia" value="australia">Australia</option>
+                  <option id="france" value="france">France</option>
+                  <option id="iceland" value="iceland">Iceland</option>
+                  <option id="mexico" value="mexico">Mexico</option>
+                  <option id="nepal" value="nepal">Nepal</option>
+                  <option id="new-zealand" value="new-zealand">New Zealand</option>
+                  <option id="turkey" value="turkey">Turkey</option>
                 </select>
               </div>
               <div class="form-item">
@@ -132,14 +130,6 @@
             </span>
           </div>
         </div>
-        <!--<div class="activity-individual-box">
-          <img src="./img/activities/skiing_alps.jpg" class="activity-thumbnail"/>
-          <div class="activity-title-bar">
-            <span class="activity-text">
-              Scuba Diving
-            </span>
-          </div>
-        </div>-->
         <div class="activity-individual-box" id="bike-box">
           <img src="./img/activities/biking.jpg" class="activity-thumbnail"/>
           <div class="activity-title-bar" id="biking">
@@ -169,10 +159,13 @@
               <th>Shop <span id="delete-shop" class="fa fa-times hidden"></span></th>
               <td id="shop-price">0</td>
             </tr>
-
           </table>
           <h3 id="border-price">Total Price <span id="tPrice">0</span></h3>
         </div>
+        <input id="checkout-button" type="button" onclick="window.location='./basket.html';" value="Checkout">
+      </div>
+      <div id="skip-button">
+        <input type="button" onclick="window.location='./accommodation.html';" value="Skip this step">
       </div>
     </div>
     <footer id="footer">

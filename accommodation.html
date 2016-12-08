@@ -16,15 +16,12 @@
   		<div class="logoleft"><img src="img/new_horizons_logo.png" width="240" height="50" alt=""/></div>
   	  <div class="topbar"></div>
   		<div class="linksbar">
-  			<div class="link1">Home</div>
-  			<div class="link1" onclick="showabout()">About</div>
-  			<div class="link1">Contact</div>
-  			<div class="link1">Shop</div>
+        <div class='link1' onclick='location.href="newlanding.html"'>Home</div>
+  			<div class='link1' onclick='showabout()'>About</div>
+  			<div class='link1' onclick='location.href="contact.html"'>Contact</div>
+  			<div class='link1' onclick='location.href="store.html"'>Shop</div>
   		</div>
     </div>
-    <!--
-    <img src ="./img/activities/sunrisemountain2.png" id="sunrise-pic"/>
-  --><div id="main-body">
   <div id="main-body">
     <div id="breadcrumb-container">
       <ul id="breadcrumb-list">
@@ -109,23 +106,6 @@
         </select>
       </div>
       <div id="activity-container">
-        <!--<div class="sub-activity-box">
-          <div class="sub-img-activity">
-            <img src="./img/activities/skiing.jpg" class="sub-activity-img">
-          </div>
-          <div class="sub-activity-title">
-            <span class="activity-text" >
-              Snowsports
-            </span>
-          </div>
-          <div class="sub-activity-description">
-            <p> See everything the apls have to offer with our Susa Valley Hike</p>
-          </div>
-          <div class="sub-activity-price-book">
-            <span>500</span>
-            <button class="book-activity">Book</button>
-          </div>
-        </div>-->
       </div>
       <div id="reciept-border">
         <div id="receipt" class="jaggededges">
@@ -151,6 +131,10 @@
           </table>
           <h3 id="border-price">Total Price <span id="tPrice">0</span></h3>
         </div>
+        <input id="checkout-button" type="button" onclick="window.location='./basket.html';" value="Checkout">
+      </div>
+      <div id="skip-button">
+          <input type="button" onclick="vaccinationRequired()" value="Next">
       </div>
     </div>
     <footer id="footer">
