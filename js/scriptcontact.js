@@ -90,7 +90,7 @@ $(id).fadeOut('slow');
 function changebackground()
 {
  $(contactform).stop().animate({
-            "backgroundColor": "#99ff99"
+            "backgroundColor": "#445544"
 	}, 1000);
 }
 

@@ -84,7 +84,7 @@ var datastore = {
       var ypos=[158,228,299,544,323,507,259];
 	canvas.addEventListener('click', function() {
 		if (destination.length>1)
-			gotoUrl("accommodation.html");
+			gotoUrl("activities.html");
 	});
 	for (i = 0 ; i<xpos.length;i++)
 	{
@@ -203,7 +203,7 @@ function updateHtml(id,newdata){
 		keypressed =9;
 		if (clearoptions==1)
 			{
-			gotoUrl("accommodation.html");
+			gotoUrl("activities.html");
 			}
 		clearoptions =1;
 		}
@@ -417,12 +417,12 @@ function getCookie(cname){
         $(document).ready(function (){
             $("#click").click(function (){
                 $('html, body').animate({
-                    scrollTop: $("#container").offset().top
+                    scrollTop: $("#newcontainer").offset().top
                 }, 1000);
             });
             $("#plink").click(function (){
 		if (destination.length>1)
-		gotoUrl("accommodation.html");
+		gotoUrl("activities.html");
 
             });
 
@@ -752,7 +752,7 @@ function scrollfurther(){
 }
 function scrollback(){
                 $('html, body').animate({
-                    scrollTop: $("#container").offset().top
+                    scrollTop: $("#newcontainer").offset().top
                 }, 1000);
 }
 
