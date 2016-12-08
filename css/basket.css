@@ -2,17 +2,16 @@
 body
 {
 background-color:#5e97ab;;
-background-image:url('../img/newbackground.jpg');
+background-image:url('../img/register.jpg');
 background-repeat:no-repeat;
 background-size: cover;
 }
 #navbar, .linksbar
 {
-overflow:auto;
 }
 #basketform
 {
-opacity:0.8;
+opacity:0.9;
 color:white;
 margin:0 auto;
 border-radius:40px;
@@ -45,7 +44,7 @@ border-radius:10px;
 #receipt-container
 {
 margin:0 auto;
-width:500px;
+width:400px;
 }
 
 
@@ -72,16 +71,63 @@ padding:10px;
 font-size:20px;
 }
 
-@media (max-width: 760px) {
-.link1, .logoleft, .topbar, .linksbar
+
+@media (max-width: 800px) {
+.link1, .topbar
 {
 width:100%;
-overflow:hidden;
+height:30px;
+padding:4px;
+font-size:20px;
 border-bottom:1px solid black;
 }
+.logoleft
+{
+height:60px;
+width:100%;
+float:left;
+padding-bottom:20px;
+}
+.linksbar
+{
+width:100%;
+position:static;
+}
+.topbar
+{
+display:none;
+}
+#can
+{
+clear:both;
+}
+#second
+{
+height:100%;
+}
+.leftarrow,.rightarrow{
+width:30px;
+}
+#sliderpop
+{
+width:650px;
+height:1200px;
+top:10px;
+left:10px;
+margin-left:0px;
+margin-top:0px;
+font-size:16px;
+}
+#contactform
+{
+width:90%;
+}
+.contacttitle
+{clear:both;}
 #basketform
 {
 width:90%;
 }
+
 }
 
