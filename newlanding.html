@@ -3,19 +3,21 @@
   <head>
   <title>New Horizons</title>
 	<link href="css/newstyle.css" type="text/css" rel="stylesheet" />
+   <link rel="stylesheet" href="./css/navfix.css">
+    <link rel="stylesheet" href="css/style.css">
 	<link href="css/newlanding.css" type="text/css" rel="stylesheet" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
   </head>
   <body>
 	<div id='navbar'>
-		<div class='logoleft'>Logo/Site Name</div>
+		<div class='logoleft'><img src="img/new_horizons_logo.png" width="240" height="50" alt=""/></div>
 		<div class='topbar'></div>
 		<div class='linksbar'>
 			<div class='link1' onclick='location.href="newlanding.html"'>Home</div>
 			<div class='link1' onclick='showabout()'>About</div>
 			<div class='link1' onclick='location.href="contact.html"'>Contact</div>
-			<div class='link1' onclick='location.href="shop.html"'>Shop</div>
-			<div class='link1' onclick='location.href="login.html"'>Login</div>
+			<div class='link1' onclick='location.href="store.html"'>Shop</div>
 		</div>
 	</div>
 <div id='first'>
@@ -35,7 +37,7 @@ New Horizons
 <div id='second'>
 <div class='breakblue'>
 </div>
-<div id='container'><br>
+<div id='newcontainer'><br>
 	<img id="mapmono" width="0" height="0" src="img/worldmap2.jpg" alt="World Map">
         <div id='searchbar'>
                 <form class="searcher" name="maplocator" autocomplete="off">
@@ -70,7 +72,11 @@ New Horizons
 <div class='breakorange'>
 </div>
 <div id='third'>
-<br><br><br>
+<br>
+<center>
+<img class='clickable' onclick='scrollback()' src='img/uparrowdarker.png' height="40px">
+</center>
+<br><br>
 <span class='guidehead'>Travel Guides</span>
 
 <div class='line'></div>
