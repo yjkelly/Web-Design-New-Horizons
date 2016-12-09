@@ -87,7 +87,7 @@ function vaccinationRequired(){
   }
   else{
     //go to store page by default
-    window.location="/./store.html";
+    window.location="./store.html";
   }
 }
 
