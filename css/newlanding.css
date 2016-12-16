@@ -1,4 +1,3 @@
-
 body {
     margin: 0;
     color: white;
@@ -15,15 +14,16 @@ a {
     width: 100%;
     height: 50px;
 }
+
+/* Area before the map has a nice background*/
 #first {
     width: 100%;
     height: 1000px;
     background-image: url('../img/newbackground.jpg');
     background-repeat: no-repeat;
-    //background-attachment:fixed;
-    //background-size:100%;
     background-size: cover;
 }
+/* Breaking areas between sections */
 .breakblue {
     text-align: center;
     width: 100%;
@@ -36,8 +36,9 @@ a {
     height: 200px;
     background-color: orange;
 }
-.centerblock
-{
+
+/* Needed to center some small elements */
+.centerblock {
 width:100px;
 text-align:center;
 margin:0 auto;
@@ -60,6 +61,8 @@ margin:0 auto;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #bbb;
 }
+
+/* We don't want the welcome words visible initially */
 #faded,
 #faded2 {
     font-size: 26px;
@@ -82,23 +85,22 @@ input[type=text] {
     height: 604px;
     float: left;
 }
+
+/* Map area */
 #second {
     width: 100%;
     height: 1000px;
     background: #ccc;
     background-image: url('../img/tiled.jpg');
 }
+
+/* Travel guides */
 #third {
     text-align: center;
     background-color: #fff;
     width: 100%;
     height: 600px;
     color: black;
-}
-#fourth {
-    width: 100%;
-    height: 1000px;
-    background: #000;
 }
 #newcontainer {
     margin: 0 auto;
@@ -109,6 +111,8 @@ input[type=text] {
     width: 900px;
     height: 300px;
 }
+
+/* Various map sidebar divs */
 #pname {
     color: white;
     font-size: 24px;
@@ -160,6 +164,8 @@ input[type=text] {
 .searcher {
     color: black;
 }
+
+/* The about pop-up shouldn't be visible until we ask it to be */
 #aboutdarken {
     display: none;
     opacity: 0.4;
@@ -212,6 +218,8 @@ input[type=text] {
 #defaultimg {
     width: 75%;
 }
+
+/* Shiny */
 #sun {
     width: 40px;
     height: 40px;
@@ -219,14 +227,8 @@ input[type=text] {
     top: 1000px;
     left: 280px;
 }
-.storeitem {
-    margin-top: 15%;
-    width: 70%;
-}
-.storeitem:hover {
-    margin-top: 10%;
-    width: 80%;
-}
+
+/* we use cover for the flash after the sun rises */
 #cover {
     z-index: -1000;
     opacity: 0.0;
@@ -246,6 +248,8 @@ input[type=text] {
     height: 2px;
     width: 60%;
 }
+
+/* Various searchbar divs including the pop-under content */
 #searchbar {
     width: 500px;
     margin: 0 auto;
@@ -291,9 +295,13 @@ input[type=text] {
 #mySlider {
     float: left;
 }
+
+/* Handy for making things look obvious that they're clickable */
 .clickable {
     cursor: pointer;
 }
+
+/* We use these two for the travel guides that pop up when we click on them */
 #sliderdarken {
     z-index: -999;
     display: none;
@@ -328,6 +336,8 @@ input[type=text] {
 .guidecontent {
     padding: 20px;
 }
+
+/* Responsiveness in the navbar, and a couple of other divs */
 @media (max-width: 800px) {
     .link1,
     .topbar,
@@ -370,4 +380,3 @@ input[type=text] {
         font-size: 16px;
     }
 }
-
