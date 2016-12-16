@@ -1,133 +1,109 @@
 
-body
-{
-background-color:#5e97ab;;
-background-image:url('../img/register.jpg');
-background-repeat:no-repeat;
-background-size: cover;
+body {
+    background-color: #5e97ab;
+    ;
+    background-image: url('../img/register.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-#navbar, .linksbar
-{
+#navbar,
+.linksbar {} #basketform {
+    opacity: 0.9;
+    color: white;
+    margin: 0 auto;
+    border-radius: 40px;
+    border: 5px solid black;
+    width: 700px;
+    background-color: #333;
+    height: 500px;
+    padding: 40px;
 }
-#basketform
-{
-opacity:0.9;
-color:white;
-margin:0 auto;
-border-radius:40px;
-border:5px solid black;
-width:700px;
-background-color:#111;
-height:500px;
-padding:40px;
+label {
+    width: 120px;
+    float: left;
+    margin-left: 40px;
 }
-label
-{
-width:120px;
-float:left;
-margin-left:40px;
+.baskethead,
+#sub {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
 }
-	
-.baskethead, #sub
-{
-margin:0 auto;
-width:80%;
-font-size:20px;
-font-weight:bold;
-text-align:center;
+#errormessage {
+    padding: 6px;
+    border-radius: 10px;
 }
-#errormessage{
-padding:6px;
-border-radius:10px;
+#receipt-container {
+    margin: 0 auto;
+    width: 400px;
 }
-
-#receipt-container
-{
-margin:0 auto;
-width:400px;
+input[type=text] {
+    width: 200px;
+    padding: 5px;
+    background-color: #eee;
+    font-size: 14px;
+    margin-bottom: 4px;
 }
-
-
-
-
-input[type=text]
-{
-width:200px;
-padding:5px;
-background-color:#eee;
-font-size:14px;
-margin-bottom:4px;
-}
-input[type=text]:focus
-{
-background-color:#ffffff;
+input[type=text]:focus {
+    background-color: #ffffff;
 }
 *:focus {
     outline: none;
 }
-textarea
-{
-padding:10px;
-font-size:20px;
+textarea {
+    padding: 10px;
+    font-size: 20px;
 }
-
-
 @media (max-width: 800px) {
-.link1, .topbar
-{
-width:100%;
-height:30px;
-padding:4px;
-font-size:20px;
-border-bottom:1px solid black;
+    .link1,
+    .topbar {
+        width: 100%;
+        height: 30px;
+        padding: 4px;
+        font-size: 20px;
+        border-bottom: 1px solid black;
+    }
+    .logoleft {
+        height: 60px;
+        width: 100%;
+        float: left;
+        padding-bottom: 20px;
+    }
+    .linksbar {
+        width: 100%;
+        position: static;
+    }
+    .topbar {
+        display: none;
+    }
+    #can {
+        clear: both;
+    }
+    #second {
+        height: 100%;
+    }
+    .leftarrow,
+    .rightarrow {
+        width: 30px;
+    }
+    #sliderpop {
+        width: 650px;
+        height: 1200px;
+        top: 10px;
+        left: 10px;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-size: 16px;
+    }
+    #contactform {
+        width: 90%;
+    }
+    .contacttitle {
+        clear: both;
+    }
+    #basketform {
+        width: 90%;
+    }
 }
-.logoleft
-{
-height:60px;
-width:100%;
-float:left;
-padding-bottom:20px;
-}
-.linksbar
-{
-width:100%;
-position:static;
-}
-.topbar
-{
-display:none;
-}
-#can
-{
-clear:both;
-}
-#second
-{
-height:100%;
-}
-.leftarrow,.rightarrow{
-width:30px;
-}
-#sliderpop
-{
-width:650px;
-height:1200px;
-top:10px;
-left:10px;
-margin-left:0px;
-margin-top:0px;
-font-size:16px;
-}
-#contactform
-{
-width:90%;
-}
-.contacttitle
-{clear:both;}
-#basketform
-{
-width:90%;
-}
-
-}
-
