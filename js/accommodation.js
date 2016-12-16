@@ -74,7 +74,7 @@ function updateAccommodation(acc){
 //When a user clicks next, this method will either reroute to the vaccination page or the store page
 // depending on the destination the user selected
 function vaccinationRequired(){
-  var vaccineCountries = ['australia','mexico', 'nepal', 'new-zealand', 'turkey'];
+  var vaccineCountries = ['australia','mexico', 'nepal', 'new zealand', 'turkey'];
   var destination = getCookie('destination');
   if(destination!=null){
     //taken from: http://stackoverflow.com/questions/6116474/how-to-find-if-an-array-contains-a-specific-string-in-javascript-jquery

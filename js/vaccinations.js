@@ -3,6 +3,8 @@
 $(document).ready(function(){
   $('#date').datepicker();
 
+  
+  
   //validate form
   $('#submit').click(function(){
     var firstName = $('#firstName').val();

@@ -373,7 +373,13 @@ $(document).ready(function(){
     var guests = getCookie("guests");
     //check if they exist, and if they do, fill out the form
     if(destination!=null){
-      $('#'+destination).attr('selected',true);
+        if(destination=="new zealand"){
+            $('#new-zealand').attr('selected',true);
+        }
+        else{
+            $('#'+destination).attr('selected',true);
+        }
+
     }
     if(arriveDate!=null){
       $('#arrive-time').val(arriveDate);
@@ -411,7 +417,7 @@ $(document).ready(function(){
         var asDate = new Date(newVal);
         //check the date isnt in the past
         if(asDate<new Date()){
-          alert("You canot select a date in the past");
+          alert("You cannot select a date in the past");
           $('input[name=departure-box]').val('');
         }
         else{
