@@ -1,16 +1,12 @@
-
 body {
     color: white;
     background-color: #5e97ab;
-    ;
     background-image: url('../img/pencil.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
-#navbar,
-.linksbar {
-    //overflow:auto;
-}
+
+/* Lots of funky contact form css */
 #contactform {
     opacity: 0.1;
     color: white;
@@ -58,6 +54,8 @@ input[type=text]:focus {
 *:focus {
     outline: none;
 }
+
+/* Informational divs with response text */
 #undername,
 #overemail,
 #underemail,
@@ -65,6 +63,7 @@ input[type=text]:focus {
     text-align: center;
     font-size: 18px;
 }
+
 #contactemailchoice {
     width: 80%;
     font-size: 20px;
@@ -92,6 +91,8 @@ textarea {
 button {
     background-color: white;
 }
+
+/* responsive navbar css */
 @media (max-width: 800px) {
     .link1,
     .topbar {
