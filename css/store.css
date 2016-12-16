@@ -13,10 +13,13 @@ color:white;
 #store
 {
 background:#A8DBF0;
-width:1000px;
+max-width:1000px;
 float:left;
 padding-bottom: 50px;
 margin-bottom: 50px;
+margin-left: 50px;
+margin-right: 50px;
+margin-top: 50px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 5px;
@@ -27,8 +30,10 @@ background-color:#5e97ab;
 text-align:center;
 width:400px;
 height:100%;
-float:right;
+float: left;
 padding-bottom: 50px;
+margin-left: 50px;
+margin-top: 50px;
 -moz-border-radius: 5px;
 -webkit-border-radius: 5px;
 border-radius: 5px;
@@ -218,11 +223,10 @@ display: inline-block;
 position: relative;
 vertical-align:top;
 margin-top:20px;
-margin-right: 75px;
-right:-60px;
+right:-80px;
 background-color:#e0e3ec;
 font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace; /* refernce font:http://www.cssfontstack.com/Lucida-Sans-Typewriter*/
-float: right;
+float: left;
 }
 /*reciept header*/
 #breakdown h2,h3{
@@ -239,4 +243,41 @@ border-collapse:collapse;
 }
 .breadcrumb span {
 color: black;
+}
+@media (max-width: 1000px) {
+.link1, .topbar, .linksbar
+{
+width:100%;
+height:30px;
+padding:4px;
+font-size:20px;
+border-bottom:1px solid black;
+}
+.logoleft
+{
+height:60px;
+width:100%;
+float:left;
+padding-bottom:20px;
+}
+.linksbar
+{
+position:static;
+}
+.topbar
+{
+display:none;
+}
+#breadcrumb-container
+{
+display:none;
+}
+#slider
+{
+display:none;
+}
+#store
+{
+margin-top:150px;	
+}
 }
