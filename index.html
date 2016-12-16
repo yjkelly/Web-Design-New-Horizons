@@ -1,42 +1,131 @@
-<!DOCTYPE html>
-<html >
+<!-- Validated at https://validator.w3.org/ -->
+<!DOCTYPE HTML>
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <title>Boilerplate</title>
-
-
-  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-
-      <link rel="stylesheet" href="css/style.css">
-
+    <title>New Horizons</title>
+    <meta charset="UTF-8">
+    <link href="css/newstyle.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/navfix.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="css/newlanding.css" type="text/css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 </head>
 
 <body>
+    <div id='navbar'>
+        <div class='logoleft'><img src="img/new_horizons_logo.png" width="240" height="50" alt="" /></div>
+        <div class='topbar'></div>
+        <div class='linksbar'>
+            <div class='link1' onclick='location.href="index.html"'>Home</div>
+            <div class='link1' onclick='showabout()'>About</div>
+            <div class='link1' onclick='location.href="contact.html"'>Contact</div>
+            <div class='link1' onclick='location.href="store.html"'>Shop</div>
+        </div>
+    </div>
+    <div id='first'>
+        <div id='cover'></div>
+        <div class='welcome centered' id="click">
+            New Horizons
+            <div id='faded'>Live each day under a different sun<br/>
+            </div>
+            <div id='faded2'>
+                <span id="imagechange"><img src='img/downarrow.png' height="40" alt='downarrow'/></span>
+                <img id="sun" src='img/sunny.png' height="40" alt='sun'/>
+            </div>
+        </div>
 
-<nav id="main-nav">
-  <ul>
-    <li class="navitem"><a class="navlink" href="#">Home</a></li>
-    <li class="navitem"><a class="navlink" href="#">Destinations</a></li>
-    <li class="navitem"><a  class="navlink" href="#">Accommodation</a></li>
-    <li class="navitem"><a class="navlink" href="#">Activities</a></li>
-    <li class="navitem"><a class="navlink" href="#">Shop</a></li>
-    <li class="navitem"> <a class="navlink" id="basket" href="#">Basket</a></li>
-  </ul>
+    </div>
 
-</nav>
-<div id="main-body">
-Main content will go here
+    <div id='second'>
+        <div class='breakblue'>
+        </div>
+        <div id='newcontainer'><br/>
+            <img id="mapmono" width="0" height="0" src="img/worldmap2.jpg" alt="World Map"/>
+            <div id='searchbar'>
+                <form class="searcher" name="maplocator" autocomplete="off">
+                    Search a City or Country<br/>
+                    <input id='mapper' type="text" name="place" size="65" onkeydown="handle(event)">
+                </form>
+                <div id='scon'>
+                    <div id='searchpop'></div>
+                </div>
+            </div>
+            <br/><br/>
+            <div id='leftside'>
+                <br/><br/>
+                <div id='pname'>Choose a city</div><br/><br/>
+                <div id='pimage'><img id='defaultimg' src='img/default0.jpg' alt='place image'/></div><br/><br/>
+                <div id='pdesc'>Hover over any red dot on the map, or type the name of a city in the search bar. The world is your oyster. </div><br/><br/>
+                <div id='plink'>
+                    <div id='my-background'>Next</div>
+                </div>
+            </div>
+            <div id='can'>
+                <canvas id="myCanvas" width="1000" height="600"></canvas>
+            </div>
 
+            <div id='clear'>
+            </div>
 
-</div>
-<footer id="footer">
-Copyright and other footer information goes here
-</footer>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://code.jquery.com/color/jquery.color-2.1.2.min.js'></script>
+        </div>
+        <br/>
+	<div class='centerblock'>
+            <img class='clickable' onclick='scrollfurther()' src='img/downarrowdarker.png' height="40" alt='downarrow'/> 
+	</div>
+            <br/>
+    </div>
+    <div class='breakorange'>
+    </div>
+    <div id='third'>
+        <br/>
+	<div class='centerblock'>
+            <img class='clickable' onclick='scrollback()' src='img/uparrowdarker.png' height="40" alt='uparrow'/>
+        </div>
+        <br/><br/>
+        <span class='guidehead'>Travel Guides</span>
 
-    <script src="js/index.js"></script>
+        <div class='line'></div>
+        <img id="ice" width="0" height="0" src="img/iceland2.jpg" alt='iceland'/>
+        <img id="new" width="0" height="0" src="img/newzealand2.jpg" alt='newzealand'/>
+        <img id="mex" width="0" height="0" src="img/mexico2.jpg" alt='mexico'/>
+        <img id="nep" width="0" height="0" src="img/nepal2.jpg" alt='nepal'/>
+        <img id="aus" width="0" height="0" src="img/australia2.jpg" alt='australia'/>
+        <img id="fra" width="0" height="0" src="img/france2.jpg" alt='france'/>
+        <img id="tur" width="0" height="0" src="img/turkey2.jpg" alt='turkey'/>
 
+        <div class='slidercontainer'>
+            <div onclick='slideover()' class='leftarrow'><br/><img class="clickable" src='img/arrowleft.jpg' width="40" alt='leftarrow'/></div>
+            <canvas id="mySlider" width="750" height="300"></canvas>
+            <div onclick='slideback()' class='rightarrow'><br/><img class="clickable" src='img/arrowright.jpg' width="40" alt='rightarrow'/></div>
+        </div>
+        <br/>
+        <div class='line'></div>
+        <br/><br/><br/><br/>
+        <br/><br/><br/><br/>
+        <br/><br/><br/><br/>
+        <br/><br/><br/><br/>
+        <div id='sliderpop' onclick='hideslider()'></div>
+        <div id='sliderdarken' onclick='hideslider()'></div>
+        <div id='footer'>
+        </div>
+        <div id='aboutdarken' onclick='hideabout()'>
+        </div>
+        <div id='about' onclick='hideabout()'>
+            <div class='aboutleftpic'><img src='img/flowerleft.jpg' width="160" alt='flower'/></div>
+            <div class='abouthead'>About Us</div>
+            <div class='aboutrightpic'><img src='img/flowerright.jpg' width="160" alt='flower'/></div>
+            <div class='abouttext'>
+                <br/> Welcome to New Horizons! Founded in 2016, we're a young company, dedicated to offering a place where adventurous souls can find just what they need for their trip away. Whether you're scuba diving in the great barrier reef, making the climb at Croagh Patrick, or camping in Yosemite, we have just what you need at our store.<br/><br/> If you're unsure what you want to do when away, check our local accommodaton and activity pages to get you started on your next big adventure. Some locations will require vaccinations before you travel. We'll set you on the right path. We're keen to provide a friendly and professional service, and we hope you enjoy the time you spend at our site!
+            </div><br/><br/>
+            <div class='aboutcenter'>
+                <img src='img/campsite.jpg' width='500' alt='campsite'/>
+	        <br/>
+            </div>
+	</div>
+        </div>
+        <script type="text/javascript" src="js/scriptlanding.js"></script>
 </body>
+
 </html>
